@@ -1,0 +1,11 @@
+% Service logfile
+% 1 	Time (sec)
+% 2 	Message
+1770199509.1004 msg: # Mqtt data connection established
+1770199509.3018 msg: # Mqtt cmd connection established
+1770199509.3126 msg: Teensy connection just opened
+1770199501.4730 Setup finished OK=0
+1770199516.5528 new Master: (0) 2026-02-04 11:05:16.535742
+1770199516.5528 Log command: robobot/cmd/ti log 1
+1770199517.5212 msg: # STeensy: close USB
+1770199513.5211 All terminated; closing logfile

@@ -1,0 +1,44 @@
+# UService:: created directory log_20260203_133023.055/
+# SGpiod::setup: found GPIO chip gpiochip4
+# UMqtt:: Waiting for Mosquitto (1)
+# UMqtt:: Waiting for Mosquitto (2)
+# UMqtt:: Waiting for Mosquitto (3)
+# UMqtt:: Waiting for Mosquitto (4)
+# UMqtt:: Waiting for Mosquitto (5)
+# UMqtt:: Waiting for Mosquitto (6)
+# UMqtt:: connection to MQTT broker on broker (127.0.0.1) established
+Tue Feb  3 01:30:30 PM CET 2026
+ ip_disp started (date may be from last clean shutdown)
+# number of users changed from 0 to 1
+# 1770121858.8736 GPIO:: pin 13 value changed to 1
+# SGPIO:: power off request - pin 0
+# UService::mqttDecode: got shutdown topic: robobot/cmd/shutdown
+# --------- terminating -----------
+Tue Feb  3 01:31:03 PM CET 2026
+ip_disp terminated
+# UService:: created directory log_20260204_110556.627/
+# SGpiod::setup: found GPIO chip gpiochip4
+# UMqtt:: Waiting for Mosquitto (1)
+# UMqtt:: Waiting for Mosquitto (2)
+# UMqtt:: Waiting for Mosquitto (3)
+# UMqtt:: Waiting for Mosquitto (4)
+# UMqtt:: Waiting for Mosquitto (5)
+# UMqtt:: Waiting for Mosquitto (6)
+# UMqtt:: connection to MQTT broker on broker (127.0.0.1) established
+Wed Feb  4 11:06:04 AM CET 2026
+ ip_disp started (date may be from last clean shutdown)
+# number of users changed from 0 to 1
+# 1770199576.3204 GPIO:: pin 13 value changed to 1
+# 1770199576.5014 GPIO:: pin 13 value changed to 0
+# SGpio:: start: bash /home/local/mission_start.bash
+# at 2026-02-04 11:07:03.988 MQTT connection lost, cause (null)
+# 1770199633.7170 MQTT reconnect (2026-02-04 11:07:13.717)
+# 1770199633.7170 MQTT reconnected (2026-02-04 11:07:13.717)
+# at 2026-02-04 11:07:48.082 MQTT connection lost, cause (null)
+# at 2026-02-04 11:07:49.705 Interrupted by signal 15
+# --------- terminating -----------
+# Gpio::run terminated
+# UMqtt:: client shutdown
+# UService:: Trying to save robot.ini (crashes sometimes)
+# UService:: configuration saved to robot.ini
+# UService:: logfile closed

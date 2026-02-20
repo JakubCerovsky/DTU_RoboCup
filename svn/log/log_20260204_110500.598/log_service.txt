@@ -1,0 +1,28 @@
+% IP display service for Teensy
+% Version  1234 2026-02-01 08:46:32
+% 1 	Time (sec) from system
+% 2 	Number of users on Linux system
+% 3 	CPU temperature (deg C)
+% 4 	% (to help import to Matlab)
+% 5 	Message string (possibly more lines)
+1770199508.1823 0 0.0 % Wed Feb  4 11:05:08 AM CET 2026
+
+1770199508.1823 0 36.4 % 
+1770199508.1937 0 36.4 %  11:05:08 up 0 min,  1 user,  load average: 0.15, 0.03, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+local    tty1     -                11:05    2.00s  0.03s  0.03s -bash
+
+1770199511.1938 1 35.8 % 
+1770199514.2010 1 35.3 % 
+1770199517.2136 1 37.5 % 
+1770199520.2208 1 36.4 % 
+1770199529.2423 1 37.0 % 
+1770199532.2560 1 37.5 % 
+1770199535.2634 1 36.4 % 
+1770199538.2706 1 37.0 % 
+1770199541.2778 1 38.0 % 
+1770199544.2850 1 37.5 % 
+1770199547.2923 1 38.0 % 
+1770199553.3124 1 38.0 %  11:05:53 up 0 min,  0 users,  load average: 0.15, 0.06, 0.02
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+

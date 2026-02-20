@@ -1,0 +1,17 @@
+# UService:: created directory log_20260220_150238.875/
+# UService:: no logging at start
+# UMqtt:: Waiting for (drive) Mosquitto (1)
+# UMqtt:: Waiting for (drive) Mosquitto (2)
+# UMqtt:: Waiting for (drive) Mosquitto (3)
+# UMqtt:: Waiting for (drive) Mosquitto (4)
+# UMqtt:: Waiting for (drive) Mosquitto (5)
+# UMqtt:: Waiting for (drive) Mosquitto (6)
+# UMqtt:: connection to MQTT broker on tcp://localhost:1883 established
+# UMqttIn:: connection to MQTT broker on tcp://localhost:1883 established
+# STeensy:: opening to USB /dev/ttyACM0
+# STeensy:: just connected 
+# SRobot:: (t0) found IP 0: wlan0 10.197.217.246
+# SGpiod::setup GPIO disabled (in robot.ini)
+# UService:: setup of Teensy 0 modules finished OK.
+# SRobot::setRobotName (section robot0) new robot name June
+# STeensy[0]:: time glitch of 3439.826 sec, 20 secs after app start, maybe an NTP update

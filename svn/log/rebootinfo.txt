@@ -1,0 +1,109 @@
+================ Rebooted ================
+Mon Feb  2 08:52:20 PM CET 2026
+ip_disp started with PID:
+900 ip_disp
+python3 cam streamer started with PID:
+971 python3
+976 python3
+Teensy _interface started with PID:
+1018 teensy_interfac
+Mon Feb  2 08:52:22 PM CET 2026
+================ Rebooted ================
+Tue Feb  3 01:30:22 PM CET 2026
+ip_disp started with PID:
+913 ip_disp
+python3 cam streamer started with PID:
+950 python3
+Teensy _interface started with PID:
+1020 teensy_interfac
+Tue Feb  3 01:30:23 PM CET 2026
+================ Rebooted ================
+Tue Feb  3 01:31:07 PM CET 2026
+ip_disp started with PID:
+927 ip_disp
+python3 cam streamer started with PID:
+969 python3
+Teensy _interface started with PID:
+1008 teensy_interfac
+Tue Feb  3 01:31:08 PM CET 2026
+================ Rebooted ================
+Wed Feb  4 11:05:00 AM CET 2026
+ip_disp started with PID:
+924 ip_disp
+python3 cam streamer started with PID:
+970 python3
+Teensy _interface started with PID:
+1001 teensy_interfac
+Wed Feb  4 11:05:01 AM CET 2026
+================ Rebooted ================
+Wed Feb  4 11:05:56 AM CET 2026
+ip_disp started with PID:
+922 ip_disp
+python3 cam streamer started with PID:
+967 python3
+Teensy _interface started with PID:
+994 teensy_interfac
+Wed Feb  4 11:05:57 AM CET 2026
+================ Rebooted ================
+Wed Feb  4 11:07:52 AM CET 2026
+ip_disp started with PID:
+899 ip_disp
+python3 cam streamer started with PID:
+948 python3
+Teensy _interface started with PID:
+969 teensy_interfac
+Wed Feb  4 11:07:53 AM CET 2026
+================ Rebooted ================
+Wed Feb  4 11:17:59 AM CET 2026
+ip_disp started with PID:
+914 ip_disp
+python3 cam streamer started with PID:
+948 python3
+Teensy _interface started with PID:
+1018 teensy_interfac
+Wed Feb  4 11:18:00 AM CET 2026
+================ Rebooted ================
+Fri Feb  6 04:10:22 PM CET 2026
+ip_disp started with PID:
+914 ip_disp
+python3 cam streamer started with PID:
+949 python3
+Teensy _interface started with PID:
+1007 teensy_interfac
+Fri Feb  6 04:10:23 PM CET 2026
+================ Rebooted ================
+Fri Feb  6 04:32:21 PM CET 2026
+ip_disp started with PID:
+903 ip_disp
+python3 cam streamer started with PID:
+945 python3
+Teensy _interface started with PID:
+972 teensy_interfac
+Fri Feb  6 04:32:22 PM CET 2026
+================ Rebooted ================
+Fri Feb 13 02:18:45 PM CET 2026
+ip_disp started with PID:
+909 ip_disp
+python3 cam streamer started with PID:
+946 python3
+Teensy _interface started with PID:
+989 teensy_interfac
+Fri Feb 13 02:18:46 PM CET 2026
+================ Rebooted ================
+Fri Feb 13 04:07:32 PM CET 2026
+ip_disp started with PID:
+908 ip_disp
+python3 cam streamer started with PID:
+953 python3
+Teensy _interface started with PID:
+996 teensy_interfac
+Fri Feb 13 04:07:33 PM CET 2026
+================ Rebooted ================
+Fri Feb 20 03:02:37 PM CET 2026
+ip_disp started with PID:
+903 ip_disp
+python3 cam streamer started with PID:
+948 python3
+Teensy _interface started with PID:
+975 teensy_interfac
+Fri Feb 20 03:02:38 PM CET 2026

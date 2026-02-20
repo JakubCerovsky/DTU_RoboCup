@@ -1,0 +1,14 @@
+% Service logfile
+% 1 	Time (sec)
+% 2 	Message
+1770995260.7934 msg: # Mqtt data connection established
+1770995260.9948 msg: # Mqtt cmd connection established
+1770995261.0057 msg: Teensy connection just opened
+1770995253.1582 Setup finished OK=1
+1770995261.3035 msg: # SCurrent: subscribed to Teensy data
+1770995261.3035 msg: # SDistForce: subscribed to Teensy data
+1770995261.3035 msg: # SEdge: subscribed to Teensy data
+1770995261.3035 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770995261.3035 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770995261.3035 msg: # SRobot:: subscribed to HBT
+1770995261.3035 msg: # STeensy: subscribed to Teensy data (id -> dname)

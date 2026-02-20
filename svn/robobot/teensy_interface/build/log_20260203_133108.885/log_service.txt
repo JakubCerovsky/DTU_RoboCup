@@ -1,0 +1,440 @@
+% Service logfile
+% 1 	Time (sec)
+% 2 	Message
+1770121876.4257 msg: # Mqtt data connection established
+1770121876.6271 msg: # Mqtt cmd connection established
+1770121876.6380 msg: Teensy connection just opened
+1770121868.8859 Setup finished OK=1
+1770121876.9358 msg: # SCurrent: subscribed to Teensy data
+1770121876.9358 msg: # SDistForce: subscribed to Teensy data
+1770121876.9358 msg: # SEdge: subscribed to Teensy data
+1770121876.9358 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770121876.9358 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770121876.9358 msg: # SRobot:: subscribed to HBT
+1770121876.9358 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770121892.9145 new Master: (0) 2026-02-03 13:31:32.895661
+1770121892.9145 Log command: robobot/cmd/ti log 1
+1770121893.3507 Mixer order: robobot/cmd/ti rc 0.25 0.0
+1770121895.4527 Mixer order: robobot/cmd/ti rc 0.1 0.5
+1770199270.4611 msg: 1770199270.4611 NTP time glitch of 77373.305 sec, maybe an NTP update
+
+1770199270.4755 msg: # SEdge: subscribed to Teensy data
+1770199270.4755 msg: # SRobot:: subscribed to HBT
+1770199270.4755 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770121876.7344 Stopped logging after 1289.6 min
+1770121876.7344 Lost Master, alive since 2026-02-03 13:31:32.895661
+1770199319.1062 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199319.5077 msg: # SRobot:: subscribed to HBT
+1770199320.1101 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199320.7125 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199321.1142 msg: # SEdge: subscribed to Teensy data
+1770199321.7166 msg: # SRobot:: subscribed to HBT
+1770199322.3190 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199322.5198 msg: # SCurrent: subscribed to Teensy data
+1770199322.5198 msg: # SDistForce: subscribed to Teensy data
+1770199322.7206 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199323.9255 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199323.9255 msg: # SRobot:: subscribed to HBT
+1770199324.7287 msg: # SEdge: subscribed to Teensy data
+1770199324.9296 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199325.3313 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199325.5321 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199326.1345 msg: # SRobot:: subscribed to HBT
+1770199327.1384 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199327.5085 msg: # STeensy: close USB
+1770199327.5395 msg: # SCurrent: subscribed to Teensy data
+1770199327.5395 msg: # SDistForce: subscribed to Teensy data
+1770199327.6099 msg: Teensy connection just opened
+1770199327.9411 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199328.3427 msg: # SEdge: subscribed to Teensy data
+1770199328.3427 msg: # SRobot:: subscribed to HBT
+1770199328.7443 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199330.3509 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199330.5554 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199330.5554 msg: # SRobot:: subscribed to HBT
+1770199331.9611 msg: # SEdge: subscribed to Teensy data
+1770199331.9611 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199332.5634 msg: # SCurrent: subscribed to Teensy data
+1770199332.5634 msg: # SDistForce: subscribed to Teensy data
+1770199332.7643 msg: # SRobot:: subscribed to HBT
+1770199333.1659 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199333.5675 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199333.5675 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199334.9732 msg: # SRobot:: subscribed to HBT
+1770199335.1740 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199335.5756 msg: # SEdge: subscribed to Teensy data
+1770199335.7765 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199336.7805 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199337.1822 msg: # SRobot:: subscribed to HBT
+1770199337.5837 msg: # SCurrent: subscribed to Teensy data
+1770199337.5837 msg: # SDistForce: subscribed to Teensy data
+1770199337.7406 msg: # STeensy: close USB
+1770199337.8425 msg: Teensy connection just opened
+1770199338.3863 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199338.3863 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199339.1896 msg: # SEdge: subscribed to Teensy data
+1770199339.3904 msg: # SRobot:: subscribed to HBT
+1770199339.9928 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199340.9968 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199341.5992 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199341.5992 msg: # SRobot:: subscribed to HBT
+1770199342.2017 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199342.6033 msg: # SCurrent: subscribed to Teensy data
+1770199342.6033 msg: # SDistForce: subscribed to Teensy data
+1770199342.8041 msg: # SEdge: subscribed to Teensy data
+1770199343.2058 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199343.6075 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199343.8083 msg: # SRobot:: subscribed to HBT
+1770199344.8123 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199346.0171 msg: # SRobot:: subscribed to HBT
+1770199346.2179 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199346.4187 msg: # SEdge: subscribed to Teensy data
+1770199346.4187 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199347.6236 msg: # SCurrent: subscribed to Teensy data
+1770199347.6236 msg: # SDistForce: subscribed to Teensy data
+1770199347.9854 msg: # STeensy: close USB
+1770199348.0246 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199348.0869 msg: Teensy connection just opened
+1770199348.2254 msg: # SRobot:: subscribed to HBT
+1770199348.8278 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199349.6311 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199350.0328 msg: # SEdge: subscribed to Teensy data
+1770199350.4344 msg: # SRobot:: subscribed to HBT
+1770199350.8360 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199351.2377 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199351.4385 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199352.6433 msg: # SCurrent: subscribed to Teensy data
+1770199352.6433 msg: # SDistForce: subscribed to Teensy data
+1770199352.6433 msg: # SRobot:: subscribed to HBT
+1770199352.8441 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199353.6476 msg: # SEdge: subscribed to Teensy data
+1770199354.0492 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199354.4510 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199354.8526 msg: # SRobot:: subscribed to HBT
+1770199356.0575 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199356.6599 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199357.0616 msg: # SRobot:: subscribed to HBT
+1770199357.2625 msg: # SEdge: subscribed to Teensy data
+1770199357.6641 msg: # SCurrent: subscribed to Teensy data
+1770199357.6641 msg: # SDistForce: subscribed to Teensy data
+1770199357.6641 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199358.2266 msg: # STeensy: close USB
+1770199358.3284 msg: Teensy connection just opened
+1770199359.2700 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199359.2700 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199359.2700 msg: # SRobot:: subscribed to HBT
+1770199359.4708 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199360.8763 msg: # SEdge: subscribed to Teensy data
+1770199360.8764 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199361.4789 msg: # SRobot:: subscribed to HBT
+1770199361.8805 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199362.4829 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199362.6837 msg: # SCurrent: subscribed to Teensy data
+1770199362.6837 msg: # SDistForce: subscribed to Teensy data
+1770199363.6879 msg: # SRobot:: subscribed to HBT
+1770199364.0895 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199364.4912 msg: # SEdge: subscribed to Teensy data
+1770199364.4912 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199365.6961 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199365.8970 msg: # SRobot:: subscribed to HBT
+1770199367.1019 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199367.3027 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199367.7043 msg: # SCurrent: subscribed to Teensy data
+1770199367.7043 msg: # SDistForce: subscribed to Teensy data
+1770199368.1059 msg: # SEdge: subscribed to Teensy data
+1770199368.1059 msg: # SRobot:: subscribed to HBT
+1770199368.1059 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199368.4679 msg: # STeensy: close USB
+1770199368.5693 msg: Teensy connection just opened
+1770199368.9085 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199369.7118 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199370.3142 msg: # SRobot:: subscribed to HBT
+1770199370.5150 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199371.7199 msg: # SEdge: subscribed to Teensy data
+1770199372.1216 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199372.3223 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199372.5232 msg: # SRobot:: subscribed to HBT
+1770199372.7240 msg: # SCurrent: subscribed to Teensy data
+1770199372.7240 msg: # SDistForce: subscribed to Teensy data
+1770199373.7280 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199374.7321 msg: # SRobot:: subscribed to HBT
+1770199374.9330 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199375.3347 msg: # SEdge: subscribed to Teensy data
+1770199375.3347 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199376.7403 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199376.9411 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199376.9411 msg: # SRobot:: subscribed to HBT
+1770199377.5436 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199377.7444 msg: # SCurrent: subscribed to Teensy data
+1770199377.7444 msg: # SDistForce: subscribed to Teensy data
+1770199378.5480 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199378.7087 msg: # STeensy: close USB
+1770199378.8100 msg: Teensy connection just opened
+1770199378.9491 msg: # SEdge: subscribed to Teensy data
+1770199379.1500 msg: # SRobot:: subscribed to HBT
+1770199380.1544 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199380.1544 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199381.3594 msg: # SRobot:: subscribed to HBT
+1770199381.7610 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199382.5642 msg: # SEdge: subscribed to Teensy data
+1770199382.7650 msg: # SCurrent: subscribed to Teensy data
+1770199382.7650 msg: # SDistForce: subscribed to Teensy data
+1770199382.7650 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199383.3675 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199383.5683 msg: # SRobot:: subscribed to HBT
+1770199384.9739 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199385.3755 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199385.3755 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199385.7771 msg: # SRobot:: subscribed to HBT
+1770199386.1787 msg: # SEdge: subscribed to Teensy data
+1770199386.5802 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199387.7851 msg: # SCurrent: subscribed to Teensy data
+1770199387.7851 msg: # SDistForce: subscribed to Teensy data
+1770199387.9858 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199387.9858 msg: # SRobot:: subscribed to HBT
+1770199388.1867 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199388.9500 msg: # STeensy: close USB
+1770199389.0518 msg: Teensy connection just opened
+1770199389.7928 msg: # SEdge: subscribed to Teensy data
+1770199389.7928 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199390.1944 msg: # SRobot:: subscribed to HBT
+1770199390.5960 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199391.3994 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199392.4034 msg: # SRobot:: subscribed to HBT
+1770199392.8051 msg: # SCurrent: subscribed to Teensy data
+1770199392.8051 msg: # SDistForce: subscribed to Teensy data
+1770199393.0059 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199393.2068 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199393.4077 msg: # SEdge: subscribed to Teensy data
+1770199394.0101 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199394.6126 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199394.6126 msg: # SRobot:: subscribed to HBT
+1770199395.8176 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199396.2191 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199396.8215 msg: # SRobot:: subscribed to HBT
+1770199397.0223 msg: # SEdge: subscribed to Teensy data
+1770199397.8256 msg: # SCurrent: subscribed to Teensy data
+1770199397.8256 msg: # SDistForce: subscribed to Teensy data
+1770199397.8256 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199398.4280 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199399.0304 msg: # SRobot:: subscribed to HBT
+1770199399.1904 msg: # STeensy: close USB
+1770199399.2917 msg: Teensy connection just opened
+1770199399.4315 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199400.6364 msg: # SEdge: subscribed to Teensy data
+1770199401.0380 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199401.0380 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199401.2389 msg: # SRobot:: subscribed to HBT
+1770199402.6444 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199402.6444 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199402.8452 msg: # SCurrent: subscribed to Teensy data
+1770199402.8452 msg: # SDistForce: subscribed to Teensy data
+1770199403.4477 msg: # SRobot:: subscribed to HBT
+1770199403.6486 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199404.2510 msg: # SEdge: subscribed to Teensy data
+1770199404.2510 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199405.6565 msg: # SRobot:: subscribed to HBT
+1770199405.8573 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199406.2589 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199407.4637 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199407.8654 msg: # SCurrent: subscribed to Teensy data
+1770199407.8654 msg: # SDistForce: subscribed to Teensy data
+1770199407.8654 msg: # SEdge: subscribed to Teensy data
+1770199407.8654 msg: # SRobot:: subscribed to HBT
+1770199408.8695 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199409.0703 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199409.4320 msg: # STeensy: close USB
+1770199409.5338 msg: Teensy connection just opened
+1770199410.0739 msg: # SRobot:: subscribed to HBT
+1770199410.6763 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199411.2789 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199411.4797 msg: # SEdge: subscribed to Teensy data
+1770199411.4797 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199412.2830 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199412.2830 msg: # SRobot:: subscribed to HBT
+1770199412.8854 msg: # SCurrent: subscribed to Teensy data
+1770199412.8854 msg: # SDistForce: subscribed to Teensy data
+1770199413.8895 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199414.0903 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199414.4919 msg: # SRobot:: subscribed to HBT
+1770199415.0943 msg: # SEdge: subscribed to Teensy data
+1770199415.4961 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199416.7008 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199416.7008 msg: # SRobot:: subscribed to HBT
+1770199417.1026 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199417.9059 msg: # SCurrent: subscribed to Teensy data
+1770199417.9059 msg: # SDistForce: subscribed to Teensy data
+1770199418.7092 msg: # SEdge: subscribed to Teensy data
+1770199418.7092 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199418.9100 msg: # SRobot:: subscribed to HBT
+1770199419.3116 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199419.6735 msg: # STeensy: close USB
+1770199419.7755 msg: Teensy connection just opened
+1770199419.9135 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199420.3152 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199421.1184 msg: # SRobot:: subscribed to HBT
+1770199421.9217 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199421.9217 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199422.3234 msg: # SEdge: subscribed to Teensy data
+1770199422.9258 msg: # SCurrent: subscribed to Teensy data
+1770199422.9259 msg: # SDistForce: subscribed to Teensy data
+1770199423.3276 msg: # SRobot:: subscribed to HBT
+1770199423.5284 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199424.5324 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199425.1347 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199425.5364 msg: # SRobot:: subscribed to HBT
+1770199425.9380 msg: # SEdge: subscribed to Teensy data
+1770199426.7412 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199427.1427 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199427.7451 msg: # SRobot:: subscribed to HBT
+1770199427.9459 msg: # SCurrent: subscribed to Teensy data
+1770199427.9459 msg: # SDistForce: subscribed to Teensy data
+1770199428.3475 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199428.5483 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199429.5525 msg: # SEdge: subscribed to Teensy data
+1770199429.7538 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199429.9147 msg: # STeensy: close USB
+1770199429.9541 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199429.9541 msg: # SRobot:: subscribed to HBT
+1770199430.0162 msg: Teensy connection just opened
+1770199431.5606 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199432.1631 msg: # SRobot:: subscribed to HBT
+1770199432.3639 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199432.9664 msg: # SCurrent: subscribed to Teensy data
+1770199432.9664 msg: # SDistForce: subscribed to Teensy data
+1770199433.1672 msg: # SEdge: subscribed to Teensy data
+1770199433.1672 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199434.3721 msg: # SRobot:: subscribed to HBT
+1770199434.7737 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199434.9746 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199436.3803 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199436.5811 msg: # SRobot:: subscribed to HBT
+1770199436.7819 msg: # SEdge: subscribed to Teensy data
+1770199437.1835 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199437.5850 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199437.9866 msg: # SCurrent: subscribed to Teensy data
+1770199437.9866 msg: # SDistForce: subscribed to Teensy data
+1770199437.9866 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199438.7898 msg: # SRobot:: subscribed to HBT
+1770199439.5930 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199440.1564 msg: # STeensy: close USB
+1770199440.1948 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199440.2580 msg: Teensy connection just opened
+1770199440.3956 msg: # SEdge: subscribed to Teensy data
+1770199440.9979 msg: # SRobot:: subscribed to HBT
+1770199441.1987 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199442.8051 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199442.8051 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199443.0058 msg: # SCurrent: subscribed to Teensy data
+1770199443.0058 msg: # SDistForce: subscribed to Teensy data
+1770199443.2067 msg: # SRobot:: subscribed to HBT
+1770199444.0100 msg: # SEdge: subscribed to Teensy data
+1770199444.4115 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199445.4155 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199445.4156 msg: # SRobot:: subscribed to HBT
+1770199445.8172 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199446.0180 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199447.6246 msg: # SEdge: subscribed to Teensy data
+1770199447.6246 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199447.6246 msg: # SRobot:: subscribed to HBT
+1770199448.0262 msg: # SCurrent: subscribed to Teensy data
+1770199448.0263 msg: # SDistForce: subscribed to Teensy data
+1770199448.0263 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199449.2310 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199449.8336 msg: # SRobot:: subscribed to HBT
+1770199450.3957 msg: # STeensy: close USB
+1770199450.4971 msg: Teensy connection just opened
+1770199450.6362 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199450.8370 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199451.2386 msg: # SEdge: subscribed to Teensy data
+1770199451.6503 new Master: (0) 2026-02-04 11:04:11.632480
+1770199451.6952 Log command: robobot/cmd/ti log 1
+1770199452.0422 msg: # SRobot:: subscribed to HBT
+1770199452.4438 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199452.7567 Mixer order: robobot/cmd/ti rc 0 0
+1770199452.8269 Mixer order: robobot/cmd/ti rc 0 0
+1770199452.8674 Log command: robobot/cmd/ti log 0
+1770199453.0461 msg: # SCurrent: subscribed to Teensy data
+1770199453.0461 msg: # SDistForce: subscribed to Teensy data
+1770199453.2469 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199454.0500 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199454.2508 msg: # SRobot:: subscribed to HBT
+1770199454.4516 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199454.8531 msg: # SEdge: subscribed to Teensy data
+1770199455.6564 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199455.8572 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770121876.7344 Lost Master, alive since 2026-02-04 11:04:11.632480
+1770199456.4596 msg: # SRobot:: subscribed to HBT
+1770199457.2629 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199458.0662 msg: # SCurrent: subscribed to Teensy data
+1770199458.0662 msg: # SDistForce: subscribed to Teensy data
+1770199458.4678 msg: # SEdge: subscribed to Teensy data
+1770199458.4679 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199458.6687 msg: # SRobot:: subscribed to HBT
+1770199458.8695 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199459.6942 new Master: (0) 2026-02-04 11:04:19.676161
+1770199459.7352 Log command: robobot/cmd/ti log 1
+1770199460.4760 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199460.6372 msg: # STeensy: close USB
+1770199460.7388 msg: Teensy connection just opened
+1770199460.7559 Mixer order: robobot/cmd/ti rc 0 0
+1770199460.8261 Mixer order: robobot/cmd/ti rc 0 0
+1770199460.8665 Log command: robobot/cmd/ti log 0
+1770199460.8771 msg: # SRobot:: subscribed to HBT
+1770199461.0779 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199462.0819 msg: # SEdge: subscribed to Teensy data
+1770199462.0819 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199463.0859 msg: # SCurrent: subscribed to Teensy data
+1770199463.0859 msg: # SDistForce: subscribed to Teensy data
+1770199463.0859 msg: # SRobot:: subscribed to HBT
+1770199463.0859 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199463.6883 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199463.6883 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770121876.7344 Lost Master, alive since 2026-02-04 11:04:19.676161
+1770199465.2949 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199465.2949 msg: # SRobot:: subscribed to HBT
+1770199465.6966 msg: # SEdge: subscribed to Teensy data
+1770199466.2991 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199466.9014 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199467.5039 msg: # SRobot:: subscribed to HBT
+1770199468.1063 msg: # SCurrent: subscribed to Teensy data
+1770199468.1063 msg: # SDistForce: subscribed to Teensy data
+1770199468.5079 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199468.9095 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199469.3111 msg: # SEdge: subscribed to Teensy data
+1770199469.7128 msg: # SRobot:: subscribed to HBT
+1770199470.1144 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199470.7586 msg: # STeensy: close USB
+1770199470.8603 msg: Teensy connection just opened
+1770199471.5201 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199471.7209 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199471.7209 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199471.9217 msg: # SRobot:: subscribed to HBT
+1770199472.9258 msg: # SEdge: subscribed to Teensy data
+1770199473.1266 msg: # SCurrent: subscribed to Teensy data
+1770199473.1266 msg: # SDistForce: subscribed to Teensy data
+1770199473.3274 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199474.1307 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199474.1307 msg: # SRobot:: subscribed to HBT
+1770199474.9340 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199476.3398 msg: # SRobot:: subscribed to HBT
+1770199476.5406 msg: # SEdge: subscribed to Teensy data
+1770199476.5406 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199476.7414 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199478.1472 msg: # SCurrent: subscribed to Teensy data
+1770199478.1472 msg: # SDistForce: subscribed to Teensy data
+1770199478.1472 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199478.5487 msg: # SRobot:: subscribed to HBT
+1770199479.3520 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199479.7538 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199480.1555 msg: # SEdge: subscribed to Teensy data
+1770199480.3563 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770199480.7579 msg: # SRobot:: subscribed to HBT
+1770199480.9186 msg: # STeensy: close USB
+1770199481.0202 msg: Teensy connection just opened
+1770199481.3597 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199481.9651 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770199482.9706 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770199482.9706 msg: # SRobot:: subscribed to HBT
+1770199485.0078 msg: # STeensy: close USB
+1770199483.1213 All terminated; closing logfile

@@ -1,0 +1,208 @@
+% Service logfile
+% 1 	Time (sec)
+% 2 	Message
+1770988735.8468 msg: # Mqtt data connection established
+1770988736.0482 msg: # Mqtt cmd connection established
+1770988736.0590 msg: Teensy connection just opened
+1770988726.9074 Setup finished OK=1
+1770988736.3568 msg: # SCurrent: subscribed to Teensy data
+1770988736.3568 msg: # SDistForce: subscribed to Teensy data
+1770988736.3568 msg: # SEdge: subscribed to Teensy data
+1770988736.3568 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770988736.3569 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770988736.3569 msg: # SRobot:: subscribed to HBT
+1770988736.3569 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770988828.6348 msg: 1770988828.6348 NTP time glitch of 73.711 sec, maybe an NTP update
+
+1770988828.6419 msg: # SCurrent: subscribed to Teensy data
+1770988828.6419 msg: # SDistForce: subscribed to Teensy data
+1770988828.6419 msg: # SEdge: subscribed to Teensy data
+1770988828.6419 msg: # SEncoder: subscribed to Teensy data (pose and/or vel)
+1770988828.6419 msg: # SImu: subscribed to Teensy data (gyro and acc)
+1770988828.6419 msg: # SRobot:: subscribed to HBT
+1770988828.6419 msg: # STeensy: subscribed to Teensy data (id -> dname)
+1770989417.4116 new Master: (0) 2026-02-13 14:30:17.394975
+1770989417.4116 Log command: robobot/cmd/ti log 1
+1770989417.8822 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770989422.9455 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989423.5973 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989423.6980 Mixer order: robobot/cmd/ti rc 0 0
+1770989423.7684 Mixer order: robobot/cmd/ti rc 0 0
+1770989423.8097 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:30:17.394975
+1770989496.6465 new Master: (0) 2026-02-13 14:31:36.630330
+1770989496.6867 Log command: robobot/cmd/ti log 1
+1770989497.2265 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770989502.3883 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989503.2911 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989503.3925 Mixer order: robobot/cmd/ti rc 0 0
+1770989503.4631 Mixer order: robobot/cmd/ti rc 0 0
+1770989503.5068 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:31:36.630330
+1770989540.4426 new Master: (0) 2026-02-13 14:32:20.426633
+1770989540.4827 Log command: robobot/cmd/ti log 1
+1770989540.8266 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770989545.8885 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989546.5420 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989546.6425 Mixer order: robobot/cmd/ti rc 0 0
+1770989546.7131 Mixer order: robobot/cmd/ti rc 0 0
+1770989546.7540 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:32:20.426633
+1770989652.4950 new Master: (0) 2026-02-13 14:34:12.479288
+1770989652.5387 Log command: robobot/cmd/ti log 1
+1770989652.8254 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770989657.8907 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989658.6931 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989658.7940 Mixer order: robobot/cmd/ti rc 0 0
+1770989658.8648 Mixer order: robobot/cmd/ti rc 0 0
+1770989658.9063 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:34:12.479288
+1770989687.3166 new Master: (0) 2026-02-13 14:34:47.298988
+1770989687.3627 Log command: robobot/cmd/ti log 1
+1770989687.8252 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770989692.8895 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989693.6424 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989693.7435 Mixer order: robobot/cmd/ti rc 0 0
+1770989693.8142 Mixer order: robobot/cmd/ti rc 0 0
+1770989693.8553 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:34:47.298988
+1770989712.5824 new Master: (0) 2026-02-13 14:35:12.564078
+1770989712.6227 Log command: robobot/cmd/ti log 1
+1770989712.8254 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770989717.8891 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989718.5924 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989718.6933 Mixer order: robobot/cmd/ti rc 0 0
+1770989718.7640 Mixer order: robobot/cmd/ti rc 0 0
+1770989718.8059 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:35:12.564078
+1770989777.9722 new Master: (0) 2026-02-13 14:36:17.956070
+1770989778.0153 Log command: robobot/cmd/ti log 1
+1770989778.2255 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770989784.8414 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989785.8941 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770989785.9948 Mixer order: robobot/cmd/ti rc 0 0
+1770989786.0655 Mixer order: robobot/cmd/ti rc 0 0
+1770989786.1067 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:36:17.956070
+1770989824.0588 new Master: (0) 2026-02-13 14:37:04.043122
+1770989824.1027 Log command: robobot/cmd/ti log 1
+1770988736.1555 Lost Master, alive since 2026-02-13 14:37:04.043122
+1770990196.3577 new Master: (0) 2026-02-13 14:43:16.340451
+1770990196.3988 Log command: robobot/cmd/ti log 1
+1770990196.8265 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770990203.5425 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990204.7456 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990204.8465 Mixer order: robobot/cmd/ti rc 0 0
+1770990204.9171 Mixer order: robobot/cmd/ti rc 0 0
+1770990204.9582 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:43:16.340451
+1770990222.0737 new Master: (0) 2026-02-13 14:43:42.057302
+1770990222.1147 Log command: robobot/cmd/ti log 1
+1770990222.4270 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770990229.0917 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990230.0441 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990230.1449 Mixer order: robobot/cmd/ti rc 0 0
+1770990230.2155 Mixer order: robobot/cmd/ti rc 0 0
+1770990230.2566 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:43:42.057302
+1770990235.8378 new Master: (0) 2026-02-13 14:43:55.821917
+1770990235.8787 Log command: robobot/cmd/ti log 1
+1770990236.2265 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770990242.8949 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990243.7980 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990243.8989 Mixer order: robobot/cmd/ti rc 0 0
+1770990243.9694 Mixer order: robobot/cmd/ti rc 0 0
+1770990244.0113 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:43:55.821917
+1770990305.2250 new Master: (0) 2026-02-13 14:45:05.206769
+1770990305.2707 Log command: robobot/cmd/ti log 1
+1770990305.8263 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770990312.4490 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990313.3011 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990313.4022 Mixer order: robobot/cmd/ti rc 0 0
+1770990313.4728 Mixer order: robobot/cmd/ti rc 0 0
+1770990313.5143 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:45:05.206769
+1770990736.8296 new Master: (0) 2026-02-13 14:52:16.813043
+1770990736.8710 Log command: robobot/cmd/ti log 1
+1770990737.2289 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770990742.2909 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990742.9939 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990743.0950 Mixer order: robobot/cmd/ti rc 0 0
+1770990743.1656 Mixer order: robobot/cmd/ti rc 0 0
+1770990743.2070 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:52:16.813043
+1770990790.1717 new Master: (0) 2026-02-13 14:53:10.155094
+1770990790.2147 Log command: robobot/cmd/ti log 1
+1770990790.8275 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770990797.4456 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990798.4979 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990798.5987 Mixer order: robobot/cmd/ti rc 0 0
+1770990798.6692 Mixer order: robobot/cmd/ti rc 0 0
+1770990798.7308 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:53:10.155094
+1770990911.9512 new Master: (0) 2026-02-13 14:55:11.934535
+1770990911.9947 Log command: robobot/cmd/ti log 1
+1770990912.2274 Mixer order: robobot/cmd/ti rc 0.25 0.0
+1770990914.3292 Mixer order: robobot/cmd/ti rc 0.1 0.5
+1770990917.5321 Mixer order: robobot/cmd/ti rc 0 0
+1770990921.8993 Mixer order: robobot/cmd/ti rc 0 0
+1770990921.9701 Mixer order: robobot/cmd/ti rc 0 0
+1770990922.0121 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:55:11.934535
+1770990931.3928 new Master: (0) 2026-02-13 14:55:31.375053
+1770990931.4347 Log command: robobot/cmd/ti log 1
+1770990931.8282 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770990936.9455 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990937.6477 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770990937.7489 Mixer order: robobot/cmd/ti rc 0 0
+1770990937.8196 Mixer order: robobot/cmd/ti rc 0 0
+1770990937.8605 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 14:55:31.375053
+1770991458.9360 new Master: (0) 2026-02-13 15:04:18.919092
+1770991458.9787 Log command: robobot/cmd/ti log 1
+1770991459.2264 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770991465.8432 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991466.7466 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991466.8476 Mixer order: robobot/cmd/ti rc 0 0
+1770991466.9180 Mixer order: robobot/cmd/ti rc 0 0
+1770991466.9590 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 15:04:18.919092
+1770991477.1046 new Master: (0) 2026-02-13 15:04:37.088122
+1770991477.1467 Log command: robobot/cmd/ti log 1
+1770991477.8271 Mixer order: robobot/cmd/ti rc 0.2 0.5
+1770991484.4945 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991485.6477 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991485.7489 Mixer order: robobot/cmd/ti rc 0 0
+1770991485.8200 Mixer order: robobot/cmd/ti rc 0 0
+1770991485.8622 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 15:04:37.088122
+1770991827.5610 new Master: (0) 2026-02-13 15:10:27.543803
+1770991827.6027 Log command: robobot/cmd/ti log 1
+1770991827.8270 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770991832.8906 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991833.5929 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991833.6941 Mixer order: robobot/cmd/ti rc 0 0
+1770991833.7646 Mixer order: robobot/cmd/ti rc 0 0
+1770991833.8058 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 15:10:27.543803
+1770991942.4773 new Master: (0) 2026-02-13 15:12:22.460665
+1770991942.5187 Log command: robobot/cmd/ti log 1
+1770991942.8265 Mixer order: robobot/cmd/ti rc 0.2 0.0
+1770991947.8883 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991948.6412 Mixer order: robobot/cmd/ti rc 0.0 0.0
+1770991948.7423 Mixer order: robobot/cmd/ti rc 0 0
+1770991948.8131 Mixer order: robobot/cmd/ti rc 0 0
+1770991948.8544 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 15:12:22.460665
+1770991975.2965 new Master: (0) 2026-02-13 15:12:55.279425
+1770991975.3387 Log command: robobot/cmd/ti log 1
+1770991975.8260 Mixer order: robobot/cmd/ti rc 0.25 0.0
+1770991977.9280 Mixer order: robobot/cmd/ti rc 0.1 0.5
+1770991981.1308 Mixer order: robobot/cmd/ti rc 0 0
+1770991985.2947 Mixer order: robobot/cmd/ti rc 0 0
+1770991985.3652 Mixer order: robobot/cmd/ti rc 0 0
+1770991985.4062 Log command: robobot/cmd/ti log 0
+1770988736.1555 Lost Master, alive since 2026-02-13 15:12:55.279425
+1770992611.6115 msg: # STeensy: close USB
+1770992610.7745 All terminated; closing logfile
