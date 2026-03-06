@@ -1,0 +1,90 @@
+import cv2
+import numpy as np
+
+"""
+BALL DETECTION SCRIPT
+This script processes a video file to detect a red ball in each frame. 
+It uses a two-step approach:
+1. Color Filtering: Isolates red pixels using HSV color space masks.
+2. Geometric Detection: Applies a Gaussian blur and Canny edge detection, 
+   followed by the Hough Circle Transform to identify the ball's 
+   position and radius.
+The Kalman filter for movement prediction has been removed to focus 
+exclusively on real-time visual detection.
+"""
+
+def filter_red_color(frame):
+    # Convert the frame to HSV color space for better color segmentation
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    # Define red color ranges (red wraps around the 0-180 HSV scale)
+    lower_red1 = np.array([0, 100, 50])
+    upper_red1 = np.array([7, 255, 255])
+    lower_red2 = np.array([173, 100, 50])
+    upper_red2 = np.array([180, 255, 255])
+
+    # Create masks for both red ranges and combine them
+    mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
+    mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
+    mask = mask1 + mask2
+
+    # Apply the mask to the original frame
+    return cv2.bitwise_and(frame, frame, mask=mask)
+
+# Load the video file
+cap = cv2.VideoCapture('rolling_ball.mp4')
+
+if not cap.isOpened():
+    print("Error: Could not open video.")
+    exit()
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+        
+    ### BALL DETECTION PIPELINE ###
+    
+    # 1. Isolate red objects
+    red_frame = filter_red_color(frame)
+
+    # 2. Pre-processing for edge detection (Grayscale + Blur)
+    gray = cv2.cvtColor(red_frame, cv2.COLOR_BGR2GRAY)
+    gray_blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+
+    # 3. Edge detection using Canny algorithm
+    edges = cv2.Canny(gray_blurred, 30, 50)
+
+    # 4. Detect circles using Hough Circles Transform
+    # Parameters: dp=1, minDist=80, param1=100 (Canny threshold), 
+    # param2=20 (accumulator threshold), minRadius/maxRadius for size filtering
+    circles = cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, dp=1, minDist=80, 
+                               param1=100, param2=20, minRadius=40, maxRadius=125)
+
+    # If at least one circle is detected
+    if circles is not None:
+        # Convert circle parameters (x, y, radius) to integers
+        circles = np.uint16(np.around(circles))
+        
+        # Get the first detected circle (usually the most prominent)
+        circle = circles[0, 0]
+        center = (circle[0], circle[1])
+        radius = circle[2]
+
+        # Draw the detected circle outline (green) and its center (red dot)
+        cv2.circle(frame, center, radius, (0, 255, 0), 5)
+        cv2.circle(frame, center, 2, (0, 0, 255), 3)
+        
+        # Display the coordinates on the frame
+        cv2.putText(frame, f"Pos: {center}", (30, 40), 
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+
+    # Show the output frame
+    cv2.imshow('Ball Detection Only', frame)
+    
+    # Exit if 'q' is pressed or after a 50ms delay
+    if cv2.waitKey(50) & 0xFF == ord('q'):
+        break
+    
+cap.release()
+cv2.destroyAllWindows()
