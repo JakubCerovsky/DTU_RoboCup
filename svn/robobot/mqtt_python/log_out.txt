@@ -1,342 +1,437 @@
 % BCM GPIO found OK
 % Starting
-Started 2026-02-03 13:31:32.895661
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master False
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+Started 2026-02-03 19:26:11.653354
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
 % GPIO setup start
 % GPIO setup finished
 % Connected to MQTT Broker localhost on 1883
 % ConnectedOut to MQTT Broker localhost on 1883
-% Robot (srobot.py) data stream OK; 1 loops.
+% Robot (srobot.py) data stream OK; 11 loops.
 % IR sensor (sir.py):: got data stream; 0 loops.
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'enc0' len(param)=4, not master False, master False
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'confw 0.074 0.074 19 92 0.23' len(param)=28, not master False, master False
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'confi' len(param)=5, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'enc0' len(param)=4, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'confw 0.074 0.074 19 92 0.23' len(param)=28, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'confi' len(param)=5, not master False, master False
 % Pose:: configured, and got data stream; 1 loops.
 % IMU (simu.py):: got data stream; 0 loops.
-% Teensy info 1770121893.0487 # got confw: r1=0.074, r2=0.074, G=19, PPR=92, WB=0.23
-% SPose.py:: Robot config info 1 at 0:00:00.190739
+% Teensy info 1770143172.1225 # got confw: r1=0.074, r2=0.074, G=19, PPR=92, WB=0.23
+% SPose.py:: Robot config info 1 at 0:00:00.467746
 %    - Wheel radius (left,right): (0.074, 0.074 m
 %    - Encoder tick per rev: 92.0
 %    - Gearing: 19.0:1
 %    - Wheel base: 0.23 m
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
 % Edge (sedge.py):: turns on line sensor
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
 % Camera available: size (616x820, 3 channels)
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master False
-% Edge (sedge.py):: got data stream; after 1 loops
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master True
+% Edge (sedge.py):: got data stream; after 2 loops
 % (uservice.py) Setup finished with connected=True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
 % Starting at state 0
 % Starting
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 16 0 0 30' len(param)=14, not master False, master False
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'rc 0.25 0.0' len(param)=11, not master False, master False
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'servo 1 100 300' len(param)=15, not master False, master False
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 0 30' len(param)=14, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'rc 0.25 0.0' len(param)=11, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'servo 1 100 300' len(param)=15, not master False, master True
 % State change from -1 to 12
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master False
-% I am now accepted as master of robot unknown
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'rc 0.1 0.5' len(param)=10, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'servo 1 -800 1000' len(param)=17, not master False, master True
+% Teensy info 1770143172.4002 # setvo t=1178683, 0, ref=100, e=10000, value=300, vel=300, dw=300, v=2047
+% Teensy info 1770143172.4025 # setvo t=1178685, 0, ref=100, e=9700, value=600, vel=300, dw=300, v=2051
+% Teensy info 1770143172.4037 # setvo t=1178687, 0, ref=100, e=9400, value=900, vel=300, dw=300, v=2055
+% Teensy info 1770143172.4059 # setvo t=1178689, 0, ref=100, e=9100, value=1200, vel=300, dw=300, v=2059
+% Teensy info 1770143172.4082 # setvo t=1178691, 0, ref=100, e=8800, value=1500, vel=300, dw=300, v=2063
+% Teensy info 1770143172.4105 # setvo t=1178693, 0, ref=100, e=8500, value=1800, vel=300, dw=300, v=2067
+% Teensy info 1770143172.4117 # setvo t=1178695, 0, ref=100, e=8200, value=2100, vel=300, dw=300, v=2071
+% Teensy info 1770143172.4139 # setvo t=1178697, 0, ref=100, e=7900, value=2400, vel=300, dw=300, v=2075
+% Teensy info 1770143172.4162 # setvo t=1178699, 0, ref=100, e=7600, value=2700, vel=300, dw=300, v=2079
+% Teensy info 1770143172.4184 # setvo t=1178701, 0, ref=100, e=7300, value=3000, vel=300, dw=300, v=2083
+% Teensy info 1770143172.4196 # setvo t=1178703, 0, ref=100, e=7000, value=3300, vel=300, dw=300, v=2087
+% Teensy info 1770143172.4219 # setvo t=1178705, 0, ref=100, e=6700, value=3600, vel=300, dw=300, v=2091
+% Teensy info 1770143172.4241 # setvo t=1178707, 0, ref=100, e=6400, value=3900, vel=300, dw=300, v=2095
+% Teensy info 1770143172.4263 # setvo t=1178709, 0, ref=100, e=6100, value=4200, vel=300, dw=300, v=2099
+% Teensy info 1770143172.4285 # setvo t=1178711, 0, ref=100, e=5800, value=4500, vel=300, dw=300, v=2103
+% Teensy info 1770143172.4297 # setvo t=1178713, 0, ref=100, e=5500, value=4800, vel=300, dw=300, v=2107
+% Teensy info 1770143172.4321 # setvo t=1178715, 0, ref=100, e=5200, value=5100, vel=300, dw=300, v=2111
+% Teensy info 1770143172.4343 # setvo t=1178717, 0, ref=100, e=4900, value=5400, vel=300, dw=300, v=2115
+% Teensy info 1770143172.4365 # setvo t=1178719, 0, ref=100, e=4600, value=5700, vel=300, dw=300, v=2119
+% Teensy info 1770143172.4376 # setvo t=1178721, 0, ref=100, e=4300, value=6000, vel=300, dw=300, v=2123
+% Teensy info 1770143172.4399 # setvo t=1178723, 0, ref=100, e=4000, value=6300, vel=300, dw=300, v=2127
+% Teensy info 1770143172.4422 # setvo t=1178725, 0, ref=100, e=3700, value=6600, vel=300, dw=300, v=2131
+% Teensy info 1770143172.4444 # setvo t=1178727, 0, ref=100, e=3400, value=6900, vel=300, dw=300, v=2135
+% Teensy info 1770143172.4457 # setvo t=1178729, 0, ref=100, e=3100, value=7200, vel=300, dw=300, v=2139
+% Teensy info 1770143172.4479 # setvo t=1178731, 0, ref=100, e=2800, value=7500, vel=300, dw=300, v=2143
+% Teensy info 1770143172.4501 # setvo t=1178733, 0, ref=100, e=2500, value=7800, vel=300, dw=300, v=2147
+% Teensy info 1770143172.4524 # setvo t=1178735, 0, ref=100, e=2200, value=8100, vel=300, dw=300, v=2151
+% Teensy info 1770143172.4536 # setvo t=1178737, 0, ref=100, e=1900, value=8400, vel=300, dw=300, v=2155
+% Teensy info 1770143172.4564 # setvo t=1178739, 0, ref=100, e=1600, value=8700, vel=300, dw=300, v=2159
+% Teensy info 1770143172.4576 # setvo t=1178741, 0, ref=100, e=1300, value=9000, vel=300, dw=300, v=2163
+% Teensy info 1770143172.4601 # setvo t=1178743, 0, ref=100, e=1000, value=9300, vel=300, dw=300, v=2167
+% Teensy info 1770143172.4625 # setvo t=1178745, 0, ref=100, e=700, value=9600, vel=300, dw=300, v=2171
+% Teensy info 1770143172.4640 # setvo t=1178747, 0, ref=100, e=400, value=9900, vel=300, dw=300, v=2175
+% Teensy info 1770143172.4666 # setvo t=1178749, 0, ref=100, e=100, value=10000, vel=300, dw=100, v=2177
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'rc 0.1 0.5' len(param)=10, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'servo 1 -800 1000' len(param)=17, not master False, master True
 % State change from 12 to 14
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% failed to publish robobot/cmd/ti with rc 0 0
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'servo 1 0 1000' len(param)=14, not master False, master True
-% failed to publish robobot/cmd/T0 with servo 1 0 1000
+% Teensy info 1770143174.5424 # setvo t=1180825, 0, ref=-800, e=-90000, value=9000, vel=1000, dw=-1000, v=2163
+% Teensy info 1770143174.5439 # setvo t=1180827, 0, ref=-800, e=-89000, value=8000, vel=1000, dw=-1000, v=2150
+% Teensy info 1770143174.5463 # setvo t=1180829, 0, ref=-800, e=-88000, value=7000, vel=1000, dw=-1000, v=2137
+% Teensy info 1770143174.5486 # setvo t=1180831, 0, ref=-800, e=-87000, value=6000, vel=1000, dw=-1000, v=2123
+% Teensy info 1770143174.5497 # setvo t=1180833, 0, ref=-800, e=-86000, value=5000, vel=1000, dw=-1000, v=2110
+% Teensy info 1770143174.5520 # setvo t=1180835, 0, ref=-800, e=-85000, value=4000, vel=1000, dw=-1000, v=2097
+% Teensy info 1770143174.5545 # setvo t=1180837, 0, ref=-800, e=-84000, value=3000, vel=1000, dw=-1000, v=2083
+% Teensy info 1770143174.5559 # setvo t=1180839, 0, ref=-800, e=-83000, value=2000, vel=1000, dw=-1000, v=2070
+% Teensy info 1770143174.5582 # setvo t=1180841, 0, ref=-800, e=-82000, value=1000, vel=1000, dw=-1000, v=2057
+% Teensy info 1770143174.5604 # setvo t=1180843, 0, ref=-800, e=-81000, value=0, vel=1000, dw=-1000, v=2044
+% Teensy info 1770143174.5617 # setvo t=1180845, 0, ref=-800, e=-80000, value=-1000, vel=1000, dw=-1000, v=2031
+% Teensy info 1770143174.5642 # setvo t=1180847, 0, ref=-800, e=-79000, value=-2000, vel=1000, dw=-1000, v=2018
+% Teensy info 1770143174.5664 # setvo t=1180849, 0, ref=-800, e=-78000, value=-3000, vel=1000, dw=-1000, v=2005
+% Teensy info 1770143174.5679 # setvo t=1180851, 0, ref=-800, e=-77000, value=-4000, vel=1000, dw=-1000, v=1991
+% Teensy info 1770143174.5702 # setvo t=1180853, 0, ref=-800, e=-76000, value=-5000, vel=1000, dw=-1000, v=1978
+% Teensy info 1770143174.5724 # setvo t=1180855, 0, ref=-800, e=-75000, value=-6000, vel=1000, dw=-1000, v=1965
+% Teensy info 1770143174.5737 # setvo t=1180857, 0, ref=-800, e=-74000, value=-7000, vel=1000, dw=-1000, v=1951
+% Teensy info 1770143174.5759 # setvo t=1180859, 0, ref=-800, e=-73000, value=-8000, vel=1000, dw=-1000, v=1938
+% Teensy info 1770143174.5783 # setvo t=1180861, 0, ref=-800, e=-72000, value=-9000, vel=1000, dw=-1000, v=1925
+% Teensy info 1770143174.5798 # setvo t=1180863, 0, ref=-800, e=-71000, value=-10000, vel=1000, dw=-1000, v=1911
+% Teensy info 1770143174.5820 # setvo t=1180865, 0, ref=-800, e=-70000, value=-11000, vel=1000, dw=-1000, v=1898
+% Teensy info 1770143174.5844 # setvo t=1180867, 0, ref=-800, e=-69000, value=-12000, vel=1000, dw=-1000, v=1885
+% Teensy info 1770143174.5857 # setvo t=1180869, 0, ref=-800, e=-68000, value=-13000, vel=1000, dw=-1000, v=1871
+% Teensy info 1770143174.5880 # setvo t=1180871, 0, ref=-800, e=-67000, value=-14000, vel=1000, dw=-1000, v=1858
+% Teensy info 1770143174.5903 # setvo t=1180873, 0, ref=-800, e=-66000, value=-15000, vel=1000, dw=-1000, v=1845
+% Teensy info 1770143174.5927 # setvo t=1180875, 0, ref=-800, e=-65000, value=-16000, vel=1000, dw=-1000, v=1832
+% Teensy info 1770143174.5941 # setvo t=1180877, 0, ref=-800, e=-64000, value=-17000, vel=1000, dw=-1000, v=1818
+% Teensy info 1770143174.5963 # setvo t=1180879, 0, ref=-800, e=-63000, value=-18000, vel=1000, dw=-1000, v=1805
+% Teensy info 1770143174.5986 # setvo t=1180881, 0, ref=-800, e=-62000, value=-19000, vel=1000, dw=-1000, v=1792
+% Teensy info 1770143174.5998 # setvo t=1180883, 0, ref=-800, e=-61000, value=-20000, vel=1000, dw=-1000, v=1778
+% Teensy info 1770143174.6021 # setvo t=1180885, 0, ref=-800, e=-60000, value=-21000, vel=1000, dw=-1000, v=1765
+% Teensy info 1770143174.6036 # setvo t=1180887, 0, ref=-800, e=-59000, value=-22000, vel=1000, dw=-1000, v=1752
+% Teensy info 1770143174.6059 # setvo t=1180889, 0, ref=-800, e=-58000, value=-23000, vel=1000, dw=-1000, v=1738
+% Teensy info 1770143174.6082 # setvo t=1180891, 0, ref=-800, e=-57000, value=-24000, vel=1000, dw=-1000, v=1725
+% Teensy info 1770143174.6105 # setvo t=1180893, 0, ref=-800, e=-56000, value=-25000, vel=1000, dw=-1000, v=1712
+% Teensy info 1770143174.6117 # setvo t=1180895, 0, ref=-800, e=-55000, value=-26000, vel=1000, dw=-1000, v=1698
+% Teensy info 1770143174.6142 # setvo t=1180897, 0, ref=-800, e=-54000, value=-27000, vel=1000, dw=-1000, v=1685
+% Teensy info 1770143174.6166 # setvo t=1180899, 0, ref=-800, e=-53000, value=-28000, vel=1000, dw=-1000, v=1672
+% Teensy info 1770143174.6179 # setvo t=1180901, 0, ref=-800, e=-52000, value=-29000, vel=1000, dw=-1000, v=1658
+% Teensy info 1770143174.6201 # setvo t=1180903, 0, ref=-800, e=-51000, value=-30000, vel=1000, dw=-1000, v=1645
+% Teensy info 1770143174.6224 # setvo t=1180905, 0, ref=-800, e=-50000, value=-31000, vel=1000, dw=-1000, v=1632
+% Teensy info 1770143174.6238 # setvo t=1180907, 0, ref=-800, e=-49000, value=-32000, vel=1000, dw=-1000, v=1619
+% Teensy info 1770143174.6261 # setvo t=1180909, 0, ref=-800, e=-48000, value=-33000, vel=1000, dw=-1000, v=1605
+% Teensy info 1770143174.6285 # setvo t=1180911, 0, ref=-800, e=-47000, value=-34000, vel=1000, dw=-1000, v=1592
+% Teensy info 1770143174.6298 # setvo t=1180913, 0, ref=-800, e=-46000, value=-35000, vel=1000, dw=-1000, v=1579
+% Teensy info 1770143174.6320 # setvo t=1180915, 0, ref=-800, e=-45000, value=-36000, vel=1000, dw=-1000, v=1565
+% Teensy info 1770143174.6344 # setvo t=1180917, 0, ref=-800, e=-44000, value=-37000, vel=1000, dw=-1000, v=1552
+% Teensy info 1770143174.6356 # setvo t=1180919, 0, ref=-800, e=-43000, value=-38000, vel=1000, dw=-1000, v=1539
+% Teensy info 1770143174.6379 # setvo t=1180921, 0, ref=-800, e=-42000, value=-39000, vel=1000, dw=-1000, v=1525
+% Teensy info 1770143174.6403 # setvo t=1180923, 0, ref=-800, e=-41000, value=-40000, vel=1000, dw=-1000, v=1512
+% Teensy info 1770143174.6426 # setvo t=1180925, 0, ref=-800, e=-40000, value=-41000, vel=1000, dw=-1000, v=1499
+% Teensy info 1770143174.6440 # setvo t=1180927, 0, ref=-800, e=-39000, value=-42000, vel=1000, dw=-1000, v=1485
+% Teensy info 1770143174.6462 # setvo t=1180929, 0, ref=-800, e=-38000, value=-43000, vel=1000, dw=-1000, v=1472
+% Teensy info 1770143174.6486 # setvo t=1180931, 0, ref=-800, e=-37000, value=-44000, vel=1000, dw=-1000, v=1459
+% Teensy info 1770143174.6498 # setvo t=1180933, 0, ref=-800, e=-36000, value=-45000, vel=1000, dw=-1000, v=1446
+% Teensy info 1770143174.6522 # setvo t=1180935, 0, ref=-800, e=-35000, value=-46000, vel=1000, dw=-1000, v=1432
+% Teensy info 1770143174.6537 # setvo t=1180937, 0, ref=-800, e=-34000, value=-47000, vel=1000, dw=-1000, v=1419
+% Teensy info 1770143174.6559 # setvo t=1180939, 0, ref=-800, e=-33000, value=-48000, vel=1000, dw=-1000, v=1406
+% Teensy info 1770143174.6583 # setvo t=1180941, 0, ref=-800, e=-32000, value=-49000, vel=1000, dw=-1000, v=1392
+% Teensy info 1770143174.6606 # setvo t=1180943, 0, ref=-800, e=-31000, value=-50000, vel=1000, dw=-1000, v=1379
+% Teensy info 1770143174.6617 # setvo t=1180945, 0, ref=-800, e=-30000, value=-51000, vel=1000, dw=-1000, v=1366
+% Teensy info 1770143174.6643 # setvo t=1180947, 0, ref=-800, e=-29000, value=-52000, vel=1000, dw=-1000, v=1352
+% Teensy info 1770143174.6667 # setvo t=1180949, 0, ref=-800, e=-28000, value=-53000, vel=1000, dw=-1000, v=1339
+% Teensy info 1770143174.6681 # setvo t=1180951, 0, ref=-800, e=-27000, value=-54000, vel=1000, dw=-1000, v=1326
+% Teensy info 1770143174.6704 # setvo t=1180953, 0, ref=-800, e=-26000, value=-55000, vel=1000, dw=-1000, v=1312
+% Teensy info 1770143174.6717 # setvo t=1180955, 0, ref=-800, e=-25000, value=-56000, vel=1000, dw=-1000, v=1299
+% Teensy info 1770143174.6744 # setvo t=1180957, 0, ref=-800, e=-24000, value=-57000, vel=1000, dw=-1000, v=1286
+% Teensy info 1770143174.6758 # setvo t=1180959, 0, ref=-800, e=-23000, value=-58000, vel=1000, dw=-1000, v=1272
+% Teensy info 1770143174.6783 # setvo t=1180961, 0, ref=-800, e=-22000, value=-59000, vel=1000, dw=-1000, v=1259
+% Teensy info 1770143174.6807 # setvo t=1180963, 0, ref=-800, e=-21000, value=-60000, vel=1000, dw=-1000, v=1246
+% Teensy info 1770143174.6819 # setvo t=1180965, 0, ref=-800, e=-20000, value=-61000, vel=1000, dw=-1000, v=1233
+% Teensy info 1770143174.6843 # setvo t=1180967, 0, ref=-800, e=-19000, value=-62000, vel=1000, dw=-1000, v=1219
+% Teensy info 1770143174.6866 # setvo t=1180969, 0, ref=-800, e=-18000, value=-63000, vel=1000, dw=-1000, v=1206
+% Teensy info 1770143174.6880 # setvo t=1180971, 0, ref=-800, e=-17000, value=-64000, vel=1000, dw=-1000, v=1193
+% Teensy info 1770143174.6906 # setvo t=1180973, 0, ref=-800, e=-16000, value=-65000, vel=1000, dw=-1000, v=1179
+% Teensy info 1770143174.6918 # setvo t=1180975, 0, ref=-800, e=-15000, value=-66000, vel=1000, dw=-1000, v=1166
+% Teensy info 1770143174.6942 # setvo t=1180977, 0, ref=-800, e=-14000, value=-67000, vel=1000, dw=-1000, v=1153
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% Teensy info 1770143174.6965 # setvo t=1180979, 0, ref=-800, e=-13000, value=-68000, vel=1000, dw=-1000, v=1139
+% Teensy info 1770143174.6978 # setvo t=1180981, 0, ref=-800, e=-12000, value=-69000, vel=1000, dw=-1000, v=1126
+% Teensy info 1770143174.7002 # setvo t=1180983, 0, ref=-800, e=-11000, value=-70000, vel=1000, dw=-1000, v=1113
+% Teensy info 1770143174.7024 # setvo t=1180985, 0, ref=-800, e=-10000, value=-71000, vel=1000, dw=-1000, v=1099
+% Teensy info 1770143174.7039 # setvo t=1180987, 0, ref=-800, e=-9000, value=-72000, vel=1000, dw=-1000, v=1086
+% Teensy info 1770143174.7062 # setvo t=1180989, 0, ref=-800, e=-8000, value=-73000, vel=1000, dw=-1000, v=1073
+% Teensy info 1770143174.7085 # setvo t=1180991, 0, ref=-800, e=-7000, value=-74000, vel=1000, dw=-1000, v=1060
+% Teensy info 1770143174.7096 # setvo t=1180993, 0, ref=-800, e=-6000, value=-75000, vel=1000, dw=-1000, v=1046
+% Teensy info 1770143174.7121 # setvo t=1180995, 0, ref=-800, e=-5000, value=-76000, vel=1000, dw=-1000, v=1033
+% Teensy info 1770143174.7146 # setvo t=1180997, 0, ref=-800, e=-4000, value=-77000, vel=1000, dw=-1000, v=1020
+% Teensy info 1770143174.7157 # setvo t=1180999, 0, ref=-800, e=-3000, value=-78000, vel=1000, dw=-1000, v=1006
+% Teensy info 1770143174.7180 # setvo t=1181001, 0, ref=-800, e=-2000, value=-79000, vel=1000, dw=-1000, v=993
+% Teensy info 1770143174.7202 # setvo t=1181003, 0, ref=-800, e=-1000, value=-80000, vel=1000, dw=-1000, v=980
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'servo 1 0 1000' len(param)=14, not master False, master True
 % State change from 14 to 20
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 13:31:32.895661' len(param)=32, not master False, master True
-% failed to publish robobot/cmd/ti with alive 2026-02-03 13:31:32.895661
+% Teensy info 1770143177.6023 # setvo t=1183885, 0, ref=0, e=80000, value=-79000, vel=1000, dw=1000, v=993
+% Teensy info 1770143177.6038 # setvo t=1183887, 0, ref=0, e=79000, value=-78000, vel=1000, dw=1000, v=1006
+% Teensy info 1770143177.6060 # setvo t=1183889, 0, ref=0, e=78000, value=-77000, vel=1000, dw=1000, v=1020
+% Teensy info 1770143177.6083 # setvo t=1183891, 0, ref=0, e=77000, value=-76000, vel=1000, dw=1000, v=1033
+% Teensy info 1770143177.6106 # setvo t=1183893, 0, ref=0, e=76000, value=-75000, vel=1000, dw=1000, v=1046
+% Teensy info 1770143177.6119 # setvo t=1183895, 0, ref=0, e=75000, value=-74000, vel=1000, dw=1000, v=1060
+% Teensy info 1770143177.6142 # setvo t=1183897, 0, ref=0, e=74000, value=-73000, vel=1000, dw=1000, v=1073
+% Teensy info 1770143177.6167 # setvo t=1183899, 0, ref=0, e=73000, value=-72000, vel=1000, dw=1000, v=1086
+% Teensy info 1770143177.6179 # setvo t=1183901, 0, ref=0, e=72000, value=-71000, vel=1000, dw=1000, v=1099
+% Teensy info 1770143177.6202 # setvo t=1183903, 0, ref=0, e=71000, value=-70000, vel=1000, dw=1000, v=1113
+% Teensy info 1770143177.6225 # setvo t=1183905, 0, ref=0, e=70000, value=-69000, vel=1000, dw=1000, v=1126
+% Teensy info 1770143177.6238 # setvo t=1183907, 0, ref=0, e=69000, value=-68000, vel=1000, dw=1000, v=1139
+% Teensy info 1770143177.6259 # setvo t=1183909, 0, ref=0, e=68000, value=-67000, vel=1000, dw=1000, v=1153
+% Teensy info 1770143177.6285 # setvo t=1183911, 0, ref=0, e=67000, value=-66000, vel=1000, dw=1000, v=1166
+% Teensy info 1770143177.6297 # setvo t=1183913, 0, ref=0, e=66000, value=-65000, vel=1000, dw=1000, v=1179
+% Teensy info 1770143177.6321 # setvo t=1183915, 0, ref=0, e=65000, value=-64000, vel=1000, dw=1000, v=1193
+% Teensy info 1770143177.6343 # setvo t=1183917, 0, ref=0, e=64000, value=-63000, vel=1000, dw=1000, v=1206
+% Teensy info 1770143177.6366 # setvo t=1183919, 0, ref=0, e=63000, value=-62000, vel=1000, dw=1000, v=1219
+% Teensy info 1770143177.6379 # setvo t=1183921, 0, ref=0, e=62000, value=-61000, vel=1000, dw=1000, v=1233
+% Teensy info 1770143177.6403 # setvo t=1183923, 0, ref=0, e=61000, value=-60000, vel=1000, dw=1000, v=1246
+% Teensy info 1770143177.6426 # setvo t=1183925, 0, ref=0, e=60000, value=-59000, vel=1000, dw=1000, v=1259
+% Teensy info 1770143177.6439 # setvo t=1183927, 0, ref=0, e=59000, value=-58000, vel=1000, dw=1000, v=1272
+% Teensy info 1770143177.6461 # setvo t=1183929, 0, ref=0, e=58000, value=-57000, vel=1000, dw=1000, v=1286
+% Teensy info 1770143177.6484 # setvo t=1183931, 0, ref=0, e=57000, value=-56000, vel=1000, dw=1000, v=1299
+% Teensy info 1770143177.6507 # setvo t=1183933, 0, ref=0, e=56000, value=-55000, vel=1000, dw=1000, v=1312
+% Teensy info 1770143177.6521 # setvo t=1183935, 0, ref=0, e=55000, value=-54000, vel=1000, dw=1000, v=1326
+% Teensy info 1770143177.6544 # setvo t=1183937, 0, ref=0, e=54000, value=-53000, vel=1000, dw=1000, v=1339
+% Teensy info 1770143177.6557 # setvo t=1183939, 0, ref=0, e=53000, value=-52000, vel=1000, dw=1000, v=1352
+% Teensy info 1770143177.6580 # setvo t=1183941, 0, ref=0, e=52000, value=-51000, vel=1000, dw=1000, v=1366
+% Teensy info 1770143177.6603 # setvo t=1183943, 0, ref=0, e=51000, value=-50000, vel=1000, dw=1000, v=1379
+% Teensy info 1770143177.6626 # setvo t=1183945, 0, ref=0, e=50000, value=-49000, vel=1000, dw=1000, v=1392
+% Teensy info 1770143177.6640 # setvo t=1183947, 0, ref=0, e=49000, value=-48000, vel=1000, dw=1000, v=1406
+% Teensy info 1770143177.6663 # setvo t=1183949, 0, ref=0, e=48000, value=-47000, vel=1000, dw=1000, v=1419
+% Teensy info 1770143177.6687 # setvo t=1183951, 0, ref=0, e=47000, value=-46000, vel=1000, dw=1000, v=1432
+% Teensy info 1770143177.6699 # setvo t=1183953, 0, ref=0, e=46000, value=-45000, vel=1000, dw=1000, v=1446
+% Teensy info 1770143177.6722 # setvo t=1183955, 0, ref=0, e=45000, value=-44000, vel=1000, dw=1000, v=1459
+% Teensy info 1770143177.6745 # setvo t=1183957, 0, ref=0, e=44000, value=-43000, vel=1000, dw=1000, v=1472
+% Teensy info 1770143177.6760 # setvo t=1183959, 0, ref=0, e=43000, value=-42000, vel=1000, dw=1000, v=1485
+% Teensy info 1770143177.6783 # setvo t=1183961, 0, ref=0, e=42000, value=-41000, vel=1000, dw=1000, v=1499
+% Teensy info 1770143177.6805 # setvo t=1183963, 0, ref=0, e=41000, value=-40000, vel=1000, dw=1000, v=1512
+% Teensy info 1770143177.6818 # setvo t=1183965, 0, ref=0, e=40000, value=-39000, vel=1000, dw=1000, v=1525
+% Teensy info 1770143177.6842 # setvo t=1183967, 0, ref=0, e=39000, value=-38000, vel=1000, dw=1000, v=1539
+% Teensy info 1770143177.6865 # setvo t=1183969, 0, ref=0, e=38000, value=-37000, vel=1000, dw=1000, v=1552
+% Teensy info 1770143177.6879 # setvo t=1183971, 0, ref=0, e=37000, value=-36000, vel=1000, dw=1000, v=1565
+% Teensy info 1770143177.6901 # setvo t=1183973, 0, ref=0, e=36000, value=-35000, vel=1000, dw=1000, v=1579
+% Teensy info 1770143177.6925 # setvo t=1183975, 0, ref=0, e=35000, value=-34000, vel=1000, dw=1000, v=1592
+% Teensy info 1770143177.6938 # setvo t=1183977, 0, ref=0, e=34000, value=-33000, vel=1000, dw=1000, v=1605
+% Teensy info 1770143177.6960 # setvo t=1183979, 0, ref=0, e=33000, value=-32000, vel=1000, dw=1000, v=1619
+% Teensy info 1770143177.6983 # setvo t=1183981, 0, ref=0, e=32000, value=-31000, vel=1000, dw=1000, v=1632
+% Teensy info 1770143177.6998 # setvo t=1183983, 0, ref=0, e=31000, value=-30000, vel=1000, dw=1000, v=1645
+% Teensy info 1770143177.7021 # setvo t=1183985, 0, ref=0, e=30000, value=-29000, vel=1000, dw=1000, v=1658
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+% Teensy info 1770143177.7044 # setvo t=1183987, 0, ref=0, e=29000, value=-28000, vel=1000, dw=1000, v=1672
+% Teensy info 1770143177.7067 # setvo t=1183989, 0, ref=0, e=28000, value=-27000, vel=1000, dw=1000, v=1685
+% Teensy info 1770143177.7080 # setvo t=1183991, 0, ref=0, e=27000, value=-26000, vel=1000, dw=1000, v=1698
+% Teensy info 1770143177.7102 # setvo t=1183993, 0, ref=0, e=26000, value=-25000, vel=1000, dw=1000, v=1712
+% Teensy info 1770143177.7117 # setvo t=1183995, 0, ref=0, e=25000, value=-24000, vel=1000, dw=1000, v=1725
+% Teensy info 1770143177.7140 # setvo t=1183997, 0, ref=0, e=24000, value=-23000, vel=1000, dw=1000, v=1738
+% Teensy info 1770143177.7164 # setvo t=1183999, 0, ref=0, e=23000, value=-22000, vel=1000, dw=1000, v=1752
+% Teensy info 1770143177.7177 # setvo t=1184001, 0, ref=0, e=22000, value=-21000, vel=1000, dw=1000, v=1765
+% Teensy info 1770143177.7199 # setvo t=1184003, 0, ref=0, e=21000, value=-20000, vel=1000, dw=1000, v=1778
+% Teensy info 1770143177.7222 # setvo t=1184005, 0, ref=0, e=20000, value=-19000, vel=1000, dw=1000, v=1792
+% Teensy info 1770143177.7237 # setvo t=1184007, 0, ref=0, e=19000, value=-18000, vel=1000, dw=1000, v=1805
+% Teensy info 1770143177.7260 # setvo t=1184009, 0, ref=0, e=18000, value=-17000, vel=1000, dw=1000, v=1818
+% Teensy info 1770143177.7283 # setvo t=1184011, 0, ref=0, e=17000, value=-16000, vel=1000, dw=1000, v=1832
+% Teensy info 1770143177.7305 # setvo t=1184013, 0, ref=0, e=16000, value=-15000, vel=1000, dw=1000, v=1845
+% Teensy info 1770143177.7319 # setvo t=1184015, 0, ref=0, e=15000, value=-14000, vel=1000, dw=1000, v=1858
+% Teensy info 1770143177.7342 # setvo t=1184017, 0, ref=0, e=14000, value=-13000, vel=1000, dw=1000, v=1871
+% Teensy info 1770143177.7366 # setvo t=1184019, 0, ref=0, e=13000, value=-12000, vel=1000, dw=1000, v=1885
+% Teensy info 1770143177.7378 # setvo t=1184021, 0, ref=0, e=12000, value=-11000, vel=1000, dw=1000, v=1898
+% Teensy info 1770143177.7401 # setvo t=1184023, 0, ref=0, e=11000, value=-10000, vel=1000, dw=1000, v=1911
+% Teensy info 1770143177.7424 # setvo t=1184025, 0, ref=0, e=10000, value=-9000, vel=1000, dw=1000, v=1925
+% Teensy info 1770143177.7437 # setvo t=1184027, 0, ref=0, e=9000, value=-8000, vel=1000, dw=1000, v=1938
+% Teensy info 1770143177.7459 # setvo t=1184029, 0, ref=0, e=8000, value=-7000, vel=1000, dw=1000, v=1951
+% Teensy info 1770143177.7484 # setvo t=1184031, 0, ref=0, e=7000, value=-6000, vel=1000, dw=1000, v=1965
+% Teensy info 1770143177.7507 # setvo t=1184033, 0, ref=0, e=6000, value=-5000, vel=1000, dw=1000, v=1978
+% Teensy info 1770143177.7518 # setvo t=1184035, 0, ref=0, e=5000, value=-4000, vel=1000, dw=1000, v=1991
+% Teensy info 1770143177.7542 # setvo t=1184037, 0, ref=0, e=4000, value=-3000, vel=1000, dw=1000, v=2005
+% Teensy info 1770143177.7566 # setvo t=1184039, 0, ref=0, e=3000, value=-2000, vel=1000, dw=1000, v=2018
+% Teensy info 1770143177.7577 # setvo t=1184041, 0, ref=0, e=2000, value=-1000, vel=1000, dw=1000, v=2031
+% Teensy info 1770143177.7602 # setvo t=1184043, 0, ref=0, e=1000, value=0, vel=1000, dw=1000, v=2044
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% failed to publish robobot/cmd/T0 with leds 16 0 64 0
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+% Saved image image_2026_Feb_03_192618_004.jpg
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 19:26:11.653354' len(param)=32, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
 % State change from 20 to 99
 % Mission finished/aborted; state=99
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% failed to publish robobot/cmd/T0 with leds 16 0 0 0
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% failed to publish robobot/cmd/ti with rc 0 0
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
-% failed to publish robobot/cmd/T0 with servo 1 0 0
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
 % shutting down
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% failed to publish robobot/cmd/ti with rc 0 0
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
-% failed to publish robobot/cmd/T0 with stop
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
-% failed to publish robobot/cmd/T0 with leds 14 0 0 0
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
-% failed to publish robobot/cmd/T0 with leds 15 0 0 0
-% Lost contact to MQTT server - terminating
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% failed to publish robobot/cmd/T0 with leds 16 0 0 0
-% Lost contact to MQTT server - terminating
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% Teensy info 1770143182.0707 # stopping
+% Teensy info 1770143182.0707 # stopping
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
 % Service - thread stopped
-% Service - thread stopped
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
-% failed to publish robobot/cmd/ti with log 0
-% Lost contact to MQTT server - terminating
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-03 13:31:32.895661: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
-% failed to publish robobot/cmd/T0 with lip 0
-% Lost contact to MQTT server - terminating
-% Edge (sedge.py):: terminated
-% Camera thread stopped
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:01:11.689282
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-04 11:04:11.632480
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:04:11.632480' len(param)=32, not master False, master False
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% Connected to MQTT Broker localhost on 1883
-% ConnectedOut to MQTT Broker localhost on 1883
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:04:11.632480' len(param)=32, not master False, master False
-% I am now accepted as master of robot unknown
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
-% Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
-% Starting at state 0
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% Service - thread stopped
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
-% shutting down
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
 % Service - thread stopped
 % Pose terminated
 % Robot terminated
 % Pose terminated
 % IR terminated
 % Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:04:11.632480: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% At 2026-02-03 19:26:11.653354: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
 % Edge (sedge.py):: terminated
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:04:13.271736
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-04 11:04:19.676161
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:04:19.676161' len(param)=32, not master False, master False
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% ConnectedOut to MQTT Broker localhost on 1883
-% Connected to MQTT Broker localhost on 1883
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:04:19.676161' len(param)=32, not master False, master False
-% I am now accepted as master of robot unknown
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
 % Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
-% Service - thread stopped
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
-% Starting at state 0
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
-% shutting down
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
-% Service - thread stopped
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:04:19.676161: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
-% Edge (sedge.py):: terminated
 % Camera terminated
 % GPIO terminated
 % logfile closed
-Ended at 2026-02-04 11:04:21.314403
+Ended at 2026-02-03 19:26:22.415694
 % Main Terminated
 % BCM GPIO found OK
 % Starting
-Started 2026-02-04 11:05:16.535742
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:05:16.535742' len(param)=32, not master False, master False
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% Connected to MQTT Broker localhost on 1883
-% ConnectedOut to MQTT Broker localhost on 1883
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:05:16.535742' len(param)=32, not master False, master False
-% I am now accepted as master of robot unknown
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
-% Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
-% Starting at state 0
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
-% Service - thread stopped
-% shutting down
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
-% Service - thread stopped
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:05:16.535742: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
-% Edge (sedge.py):: terminated
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:05:18.185576
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-04 11:06:18.928511
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master False
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+Started 2026-02-03 20:59:50.115738
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
 % GPIO setup start
 % GPIO setup finished
 % Connected to MQTT Broker localhost on 1883
 % ConnectedOut to MQTT Broker localhost on 1883
 % Robot (srobot.py) data stream OK; 2 loops.
 % IR sensor (sir.py):: got data stream; 0 loops.
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'enc0' len(param)=4, not master False, master False
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'confw 0.074 0.074 19 92 0.23' len(param)=28, not master False, master False
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'confi' len(param)=5, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'enc0' len(param)=4, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'confw 0.074 0.074 19 92 0.23' len(param)=28, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'confi' len(param)=5, not master False, master False
 % Pose:: configured, and got data stream; 1 loops.
 % IMU (simu.py):: got data stream; 0 loops.
-% Teensy info 1770199579.1118 # got confw: r1=0.074, r2=0.074, G=19, PPR=92, WB=0.23
-% SPose.py:: Robot config info 1 at 0:00:00.176389
+% Teensy info 1770148790.2980 # got confw: r1=0.074, r2=0.074, G=19, PPR=92, WB=0.23
+% SPose.py:: Robot config info 1 at 0:00:00.177762
 %    - Wheel radius (left,right): (0.074, 0.074 m
 %    - Encoder tick per rev: 92.0
 %    - Gearing: 19.0:1
 %    - Wheel base: 0.23 m
 % Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
 % Camera available: size (616x820, 3 channels)
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master False
 % Edge (sedge.py):: got data stream; after 1 loops
 % (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
 % Starting at state 0
 % Starting
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 0 30' len(param)=14, not master False, master False
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'rc 0.25 0.0' len(param)=11, not master False, master False
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'servo 1 100 300' len(param)=15, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 0 30' len(param)=14, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'rc 0.25 0.0' len(param)=11, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'servo 1 100 300' len(param)=15, not master False, master False
 % State change from -1 to 12
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master False
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master False
 % I am now accepted as master of robot unknown
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'rc 0.1 0.5' len(param)=10, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'servo 1 -800 1000' len(param)=17, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'rc 0.1 0.5' len(param)=10, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'servo 1 -800 1000' len(param)=17, not master False, master True
 % State change from 12 to 14
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'servo 1 0 1000' len(param)=14, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'servo 1 0 1000' len(param)=14, not master False, master True
 % State change from 14 to 20
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% Saved image image_2026_Feb_04_110625_004.jpg
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
- Edge::paint: posLeft 0.0, right 0.0
-# imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
+% Saved image image_2026_Feb_03_205957_004.jpg
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
 % State change from 20 to 99
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'alive 2026-02-03 20:59:50.115738' len(param)=32, not master False, master True
 % Mission finished/aborted; state=99
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
 % shutting down
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:06:18.928511' len(param)=32, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
-% Teensy info 1770199588.9781 # stopping
-% Teensy info 1770199588.9782 # stopping
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% Teensy info 1770148800.2962 # stopping
+% Teensy info 1770148800.2963 # stopping
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
 % Service - thread stopped
 % Camera thread stopped
 % Service - thread stopped
@@ -345,201 +440,31 @@ Started 2026-02-04 11:06:18.928511
 % Pose terminated
 % IR terminated
 % Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:06:18.928511: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% At 2026-02-03 20:59:50.115738: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
 % Edge (sedge.py):: terminated
 % Camera terminated
 % GPIO terminated
 % logfile closed
-Ended at 2026-02-04 11:06:30.134013
+Ended at 2026-02-03 21:00:01.457992
 % Main Terminated
 % BCM GPIO found OK
 % Starting
-Started 2026-02-04 11:09:15.270782
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:09:15.270782' len(param)=32, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+Started 2026-02-13 16:22:49.958629
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master False
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
 % GPIO setup start
 % GPIO setup finished
 % Connected to MQTT Broker localhost on 1883
 % ConnectedOut to MQTT Broker localhost on 1883
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:09:15.270782' len(param)=32, not master False, master False
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
-% Service - thread stopped
-% Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% Service - thread stopped
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
-% Starting at state 0
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master False
-% shutting down
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master False
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:09:15.270782: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master False
-% Edge (sedge.py):: terminated
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:09:16.598969
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-04 11:11:25.064342
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:11:25.064342' len(param)=32, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% Connected to MQTT Broker localhost on 1883
-% ConnectedOut to MQTT Broker localhost on 1883
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:11:25.064342' len(param)=32, not master False, master False
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
-% Service - thread stopped
-% Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% Service - thread stopped
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
-% Starting at state 0
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master False
-% shutting down
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master False
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:11:25.064342: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master False
-% Edge (sedge.py):: terminated
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:11:26.327113
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-04 11:11:29.579297
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:11:29.579297' len(param)=32, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% Connected to MQTT Broker localhost on 1883
-% ConnectedOut to MQTT Broker localhost on 1883
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:11:29.579297' len(param)=32, not master False, master False
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
-% Service - thread stopped
-% Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
-% Starting at state 0
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master False
-% Service - thread stopped
-% shutting down
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master False
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:11:29.579297: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master False
-% Edge (sedge.py):: terminated
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:11:30.926655
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-04 11:11:38.508844
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:11:38.508844' len(param)=32, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% Connected to MQTT Broker localhost on 1883
-% ConnectedOut to MQTT Broker localhost on 1883
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/ti' with 'alive 2026-02-04 11:11:38.508844' len(param)=32, not master False, master False
-% Robot (srobot.py) got no HBT data after 31 loops (stops).
-% Is teensy_interface running?
-% Camera thread stopped
-% Edge (sedge.py):: turns on line sensor
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
-% (uservice.py) Setup finished with connected=True
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
-% Starting at state 0
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master False
-% Service - thread stopped
-% Service - thread stopped
-% shutting down
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master False
-% Pose terminated
-% Robot terminated
-% Pose terminated
-% IR terminated
-% Edge (sedge.py):: turn off line sensor
-% At 2026-02-04 11:11:38.508844: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master False
-% Edge (sedge.py):: terminated
-% Camera terminated
-% GPIO terminated
-% logfile closed
-Ended at 2026-02-04 11:11:39.726764
-% Main Terminated
-% BCM GPIO found OK
-% Starting
-Started 2026-02-13 15:12:55.279425
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master False
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
-% GPIO setup start
-% GPIO setup finished
-% Connected to MQTT Broker localhost on 1883
-% ConnectedOut to MQTT Broker localhost on 1883
-% Robot (srobot.py) data stream OK; 10 loops.
-% IR sensor (sir.py):: got data stream; 0 loops.
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'enc0' len(param)=4, not master False, master False
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'confw 0.074 0.074 19 92 0.23' len(param)=28, not master False, master False
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'confi' len(param)=5, not master False, master False
-% Teensy info 1770991975.6606 # got confw: r1=0.074, r2=0.074, G=19, PPR=92, WB=0.23
-% SPose.py:: Robot config info 1 at 0:00:00.378675
+% Robot (srobot.py) data stream OK; 14 loops.
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
+% IR sensor (sir.py):: missing data updates after 21 wait loops (continues).
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'enc0' len(param)=4, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'confw 0.074 0.074 19 92 0.23' len(param)=28, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'confi' len(param)=5, not master False, master True
+% Teensy info 1770996170.6605 # got confw: r1=0.074, r2=0.074, G=19, PPR=92, WB=0.23
+% SPose.py:: Robot config info 1 at 0:00:00.702871
 %    - Wheel radius (left,right): (0.074, 0.074 m
 %    - Encoder tick per rev: 92.0
 %    - Gearing: 19.0:1
@@ -547,90 +472,89 @@ Started 2026-02-13 15:12:55.279425
 % Pose:: configured, and got data stream; 1 loops.
 % IMU (simu.py):: got data stream; 0 loops.
 % Edge (sedge.py):: turns on line sensor
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
 % Camera available: size (616x820, 3 channels)
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master False
-% I am now accepted as master of robot unknown
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'liwi' len(param)=4, not master False, master True
 % Edge (sedge.py):: got data stream; after 1 loops
 % (uservice.py) Setup finished with connected=True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
 % Starting at state 0
 % Starting
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 0 30' len(param)=14, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'rc 0.25 0.0' len(param)=11, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'servo 1 100 300' len(param)=15, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 0 30' len(param)=14, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'rc 0.25 0.0' len(param)=11, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'servo 1 100 300' len(param)=15, not master False, master True
 % State change from -1 to 12
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'rc 0.1 0.5' len(param)=10, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'servo 1 -800 1000' len(param)=17, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'rc 0.1 0.5' len(param)=10, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'servo 1 -800 1000' len(param)=17, not master False, master True
 % State change from 12 to 14
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'servo 1 0 1000' len(param)=14, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'servo 1 0 1000' len(param)=14, not master False, master True
 % State change from 14 to 20
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
-% Saved image image_2026_Feb_13_151302_004.jpg
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
- Edge::paint: posLeft 0.0, right 0.0
-# imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
+% Saved image image_2026_Feb_13_162257_004.jpg
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
  Edge::paint: posLeft 0.0, right 0.0
 # imageAnalysis:: image not saved
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 64 0' len(param)=14, not master False, master True
+ Edge::paint: posLeft 0.0, right 0.0
+# imageAnalysis:: image not saved
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 30 30' len(param)=15, not master False, master True
 % State change from 20 to 99
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 16:22:49.958629' len(param)=32, not master False, master True
 % Mission finished/aborted; state=99
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'alive 2026-02-13 15:12:55.279425' len(param)=32, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
 % shutting down
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
-% Teensy info 1770991985.3869 # stopping
-% Teensy info 1770991985.3870 # stopping
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% Teensy info 1770996180.6278 # stopping
+% Teensy info 1770996180.6278 # stopping
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
 % Service - thread stopped
 % Service - thread stopped
 % Pose terminated
@@ -638,11 +562,386 @@ Started 2026-02-13 15:12:55.279425
 % Pose terminated
 % IR terminated
 % Edge (sedge.py):: turn off line sensor
-% At 2026-02-13 15:12:55.279425: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% At 2026-02-13 16:22:49.958629: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
 % Edge (sedge.py):: terminated
 % Camera thread stopped
 % Camera terminated
 % GPIO terminated
 % logfile closed
-Ended at 2026-02-13 15:13:05.716243
+Ended at 2026-02-13 16:23:00.969920
 % Main Terminated
+% BCM GPIO found OK
+% Starting
+Started 2026-03-04 08:57:43.811272
+% Connected to MQTT Broker localhost on 1883
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:57:43.811272' len(param)=32, not master False, master False
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% ConnectedOut to MQTT Broker localhost on 1883
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:57:43.811272' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
+% Robot (srobot.py) got no HBT data after 31 loops (stops).
+% Is teensy_interface running?
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% Service - thread stopped
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
+% (uservice.py) Setup finished with connected=True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
+% Starting at state 0
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
+% shutting down
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 08:57:43.811272: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 08:57:45.462078
+% Main Terminated
+% BCM GPIO found OK
+% Starting
+Started 2026-03-04 08:57:49.790432
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:57:49.790432' len(param)=32, not master False, master False
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% ConnectedOut to MQTT Broker localhost on 1883
+% Connected to MQTT Broker localhost on 1883
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:57:49.790432' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
+% Robot (srobot.py) got no HBT data after 31 loops (stops).
+% Is teensy_interface running?
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% Service - thread stopped
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
+% (uservice.py) Setup finished with connected=True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
+% Starting at state 0
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
+% shutting down
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 08:57:49.790432: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 08:57:51.426477
+% Main Terminated
+% BCM GPIO found OK
+% mqtt-client is already running - terminating
+%   if it is partially crashed in the background, then try:
+%     pkill mqtt-client
+%   or, if that fails use the most brutal kill
+%     pkill -9 mqtt-client
+% Main Terminated
+% BCM GPIO found OK
+% Starting
+Started 2026-03-04 08:59:35.551441
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:59:35.551441' len(param)=32, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% ConnectedOut to MQTT Broker localhost on 1883
+% Connected to MQTT Broker localhost on 1883
+% Button/pin 6 is pressed (high)
+% Button/pin 6 (stop) is pressed
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master False
+% Service - thread stopped
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master False
+% (uservice.py) Setup finished with connected=True
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master False
+% Starting at state 0
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master False
+% shutting down
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master False
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master False
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 08:59:35.551441: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master False
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 08:59:36.689275
+% Main Terminated
+% BCM GPIO found OK
+% Starting
+Started 2026-03-04 08:59:44.212038
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:59:44.212038' len(param)=32, not master False, master False
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% Connected to MQTT Broker localhost on 1883
+% ConnectedOut to MQTT Broker localhost on 1883
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 08:59:44.212038' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
+% Robot (srobot.py) got no HBT data after 31 loops (stops).
+% Is teensy_interface running?
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% Service - thread stopped
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
+% (uservice.py) Setup finished with connected=True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
+% Starting at state 0
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
+% shutting down
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 08:59:44.212038: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 08:59:45.847401
+% Main Terminated
+% BCM GPIO found OK
+% Starting
+Started 2026-03-04 09:00:26.109248
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 09:00:26.109248' len(param)=32, not master False, master False
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% Connected to MQTT Broker localhost on 1883
+% ConnectedOut to MQTT Broker localhost on 1883
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 09:00:26.109248' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
+% Robot (srobot.py) got no HBT data after 31 loops (stops).
+% Is teensy_interface running?
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% Service - thread stopped
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
+% (uservice.py) Setup finished with connected=True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
+% Starting at state 0
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'servo 1 0 0' len(param)=11, not master False, master True
+% shutting down
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 09:00:26.109248: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 09:00:27.744109
+% Main Terminated
+% BCM GPIO found OK
+% mission-run: initializing
+Started 2026-03-04 09:47:13.447129
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 09:47:13.447129' len(param)=32, not master False, master False
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% Connected to MQTT Broker localhost on 1883
+% ConnectedOut to MQTT Broker localhost on 1883
+% GPIO setup start
+% GPIO setup finished
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 09:47:13.447129' len(param)=32, not master False, master False
+% I am now accepted as master of robot unknown
+% Robot (srobot.py) got no HBT data after 31 loops (stops).
+% Is teensy_interface running?
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% Service - thread stopped
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
+% (uservice.py) Setup finished with connected=True
+% mission-run: start
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'leds 16 30 30 0' len(param)=15, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/ti' with 'rc 0.0 0.0' len(param)=10, not master False, master True
+% mission-run: stopped
+% shutting down
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 09:47:13.447129: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 09:47:15.073286
+% mission-run: terminated
+% No GPIO (not on a Pi?) - continue without GPIO support
+% mission-run: initializing
+Started 2026-03-04 10:05:05.695700
+% At 2026-03-04 10:05:05.695700: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 10:05:05.695700' len(param)=32, not master False, master False
+% At 2026-03-04 10:05:05.695700: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% Connected to MQTT Broker localhost on 1883
+% ConnectedOut to MQTT Broker localhost on 1883
+% I am not robot master, quitting!
+% I am not robot master, quitting!
+% At 2026-03-04 10:05:05.695700: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 10:05:05.695700' len(param)=32, not master True, master False
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 10:05:05.695700: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master True, master False
+% At 2026-03-04 10:05:05.695700: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master True, master False
+% (uservice.py) Setup finished with connected=True
+% mission-run: startup failed (no robot heartbeat)
+% mission-run: start teensy_interface and try again
+% shutting down
+% Service - thread stopped
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 10:05:05.695700: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master True, master False
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 10:05:06.761406
+% mission-run: terminated
+% BCM GPIO found OK
+% mission-run: initializing
+Started 2026-03-04 10:05:05.235829
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 10:05:05.235829' len(param)=32, not master False, master False
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% ConnectedOut to MQTT Broker localhost on 1883
+% Connected to MQTT Broker localhost on 1883
+% I am now accepted as master of robot unknown
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 10:05:05.235829' len(param)=32, not master False, master True
+% Robot (srobot.py) got no HBT data after 31 loops (stops).
+% Is teensy_interface running?
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master False, master True
+% Service - thread stopped
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master False, master True
+% (uservice.py) Setup finished with connected=True
+% mission-run: startup failed (no robot heartbeat)
+% mission-run: start teensy_interface and try again
+% shutting down
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/ti' with 'rc 0 0' len(param)=6, not master False, master True
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'stop' len(param)=4, not master False, master True
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'leds 14 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'leds 15 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'leds 16 0 0 0' len(param)=13, not master False, master True
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/ti' with 'log 0' len(param)=5, not master False, master True
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 10:05:05.235829: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master False, master True
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 10:05:06.861631
+% mission-run: terminated
+% BCM GPIO found OK
+% mission-run: initializing
+Started 2026-03-04 10:05:07.818725
+% Connected to MQTT Broker localhost on 1883
+% At 2026-03-04 10:05:07.818725: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 10:05:07.818725' len(param)=32, not master False, master False
+% At 2026-03-04 10:05:07.818725: sending: 'robobot/cmd/ti' with 'log 1' len(param)=5, not master False, master False
+% GPIO setup start
+% GPIO setup finished
+% ConnectedOut to MQTT Broker localhost on 1883
+% I am not robot master, quitting!
+% At 2026-03-04 10:05:07.818725: sending: 'robobot/cmd/ti' with 'alive 2026-03-04 10:05:07.818725' len(param)=32, not master True, master False
+% Camera thread stopped
+% Edge (sedge.py):: turns on line sensor
+% At 2026-03-04 10:05:07.818725: sending: 'robobot/cmd/T0' with 'lip 1' len(param)=5, not master True, master False
+% At 2026-03-04 10:05:07.818725: sending: 'robobot/cmd/T0' with 'sub livn 10' len(param)=11, not master True, master False
+% (uservice.py) Setup finished with connected=True
+% mission-run: startup failed (no robot heartbeat)
+% mission-run: start teensy_interface and try again
+% shutting down
+% Service - thread stopped
+% Service - thread stopped
+% Pose terminated
+% Robot terminated
+% Pose terminated
+% IR terminated
+% Edge (sedge.py):: turn off line sensor
+% At 2026-03-04 10:05:07.818725: sending: 'robobot/cmd/T0' with 'lip 0' len(param)=5, not master True, master False
+% Edge (sedge.py):: terminated
+% Camera terminated
+% GPIO terminated
+% logfile closed
+Ended at 2026-03-04 10:05:08.986523
+% mission-run: terminated
