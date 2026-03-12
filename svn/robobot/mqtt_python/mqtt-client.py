@@ -254,7 +254,7 @@ def loop():
       driveToLine()
       state = 100
     elif state == 104:
-      servo.servo_down_position()
+      servo.servo_change_position(-500)
       state = 100
     else: # abort
       print(f"% Mission finished/aborted; state={state}")

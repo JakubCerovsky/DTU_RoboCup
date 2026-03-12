@@ -1,47 +1,33 @@
 #!/usr/bin/env python3
 
+# This file operates the front servo of the robobot. It is used to control the position of the servo, which can be adjusted within a specified range. 
+# The setup method initializes the servo to a default position, while the servo_change_position method allows for changing the position of the servo based on input. The servo_center method resets the servo to its center position.
+# The values for the position can be anywhere between 300 and -700 (positive values move the servo down, negative values move it up). The speed of the servo can also be adjusted, with a default value of 300.
+# Position limits were decided based on the physical constraints of the servo combined with the 3D printed front arm of the robot.
 class SServo:
-    TICK_UP = 100
-    TICK_DOWN = -100
-    POS_UP = -700
-    POS_DOWN = 300
-    SPEED = 200
-    CURRENT_POS = 0
+    MAX_POS_UP = -700
+    MAX_POS_DOWN = 300
+    SPEED = 300
     
     def setup(self):
         from uservice import service
-        self.CURRENT_POS = 0
-        service.send("robobot/cmd/T0","servo 1 {self.CURRENT_POS} {self.SPEED}")
+        service.send("robobot/cmd/T0","servo 1 100 {self.SPEED}")
         print("% SServo:: setup complete")
 
-    def servo_down_one_tick(self):
+    def servo_change_position(self, pos, speed=None):
         from uservice import service
-        self.CURRENT_POS += self.TICK_DOWN
-        service.send("robobot/cmd/T0","servo 1 {self.TICK_DOWN} {self.SPEED}")
-        print(f"% SServo:: servo down one tick: {self.CURRENT_POS}")
-
-    def servo_down_position(self):
-        from uservice import service
-        self.CURRENT_POS = self.POS_DOWN
-        service.send("robobot/cmd/T0","servo 1 300 100")
-        print(f"% SServo:: servo down: {self.CURRENT_POS}")
-
-    def servo_up_one_tick(self):
-        from uservice import service
-        self.CURRENT_POS += self.TICK_UP
-        service.send("robobot/cmd/T0","servo 1 {self.TICK_UP} {self.SPEED}")
-        print(f"% SServo:: servo up one tick: {self.CURRENT_POS}")
-
-    def servo_up_position(self):
-        from uservice import service
-        self.CURRENT_POS = self.POS_UP
-        service.send("robobot/cmd/T0","servo 1 {self.POS_UP} {self.SPEED}")
-        print(f"% SServo:: servo up: {self.CURRENT_POS}")
+        if pos < self.MAX_POS_UP:
+            pos = self.MAX_POS_UP
+        elif pos > self.MAX_POS_DOWN:
+            pos = self.MAX_POS_DOWN
+        if speed is not None:
+            self.SPEED = speed
+        service.send("robobot/cmd/T0","servo 1 {pos} {self.SPEED}")
+        print(f"% SServo:: servo center: {pos}")
 
     def servo_center(self):
         from uservice import service
-        self.CURRENT_POS = 0
-        service.send("robobot/cmd/T0","servo 1 {self.CURRENT_POS} {self.SPEED}")
-        print(f"% SServo:: servo center: {self.CURRENT_POS}")
+        service.send("robobot/cmd/T0","servo 1 100 {self.SPEED}")
+        print(f"% SServo:: servo center: 100")
         
 servo = SServo()
