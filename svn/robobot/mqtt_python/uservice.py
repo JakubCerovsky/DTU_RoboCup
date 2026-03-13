@@ -42,6 +42,7 @@ from srobot import robot
 from scam import cam
 from sedge import edge
 from sgpio import gpio
+from sservo import servo
 from ulog import flog
 import psutil
 
@@ -96,6 +97,8 @@ class UService:
                 help='Turn 180 degrees (Pi) and stop')
     self.parser.add_argument('-e', '--edge', action='store_true',
                 help='Find line and follow the left edge')
+    self.parser.add_argument('-r', '--servo', action='store_true',
+                help='Move servo')
     self.parser.add_argument('-u', '--usestate', type=int, default = 0,
                 help='set mission state to this value')
     self.args = self.parser.parse_args()
@@ -125,6 +128,7 @@ class UService:
     imu.setup()
     cam.setup()
     edge.setup()
+    servo.setup()
     print(f"% (uservice.py) Setup finished with connected={self.connected}")
     if self.args.level:
       print(f"% Command line argument '--level'={self.args.level} but not implemented")

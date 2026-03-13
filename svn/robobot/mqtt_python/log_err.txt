@@ -1,0 +1,8 @@
+  File "/home/local/svn/robobot/mqtt_python/mqtt-client.py", line 257
+    servo.servo_down_position():
+                               ^
+SyntaxError: invalid syntax
+  File "/home/local/svn/robobot/mqtt_python/mqtt-client.py", line 257
+    servo.servo_down_position():
+                               ^
+SyntaxError: invalid syntax

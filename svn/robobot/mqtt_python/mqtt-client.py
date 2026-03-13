@@ -38,7 +38,7 @@ from srobot import robot
 from scam import cam
 from sedge import edge
 from sgpio import gpio
-from scam import cam
+from sservo import servo
 from uservice import service
 
 ############################################################
@@ -88,12 +88,10 @@ def driveOneMeter():
   while not (service.stop):
     if state == 0: # wait for start signal
       service.send("robobot/cmd/ti","rc 0.2 0.0") # (forward m/s, turn-rate rad/sec)
-      service.send("robobot/cmd/T0","servo 1 -800 300") # (servo up slow)
       state = 1
     elif state == 1:
       if pose.tripB > 1.0 or pose.tripBtimePassed() > 15:
         service.send("robobot/cmd/ti","rc 0.0 0.0") # (forward m/s, turn-rate rad/sec)
-        service.send("robobot/cmd/T0","servo 1 0 0") # (servo front fast)
         state = 2
       pass
     elif state == 2:
@@ -122,7 +120,6 @@ def driveToLine():
       if ir.ir[0] < 0.2:
         service.send("robobot/cmd/ti","rc 0.2 0.0") # (forward m/s, turn-rate rad/sec)
         service.send("robobot/cmd/T0/","lognow 3") # (start Teensy log)
-        service.send("robobot/cmd/T0","servo 1 -800 300") # (servo up slow)
         state = 1
     elif state == 1:
       if pose.tripB > 1.0 or pose.tripBtimePassed() > 15:
@@ -131,7 +128,6 @@ def driveToLine():
       if edge.lineValidCnt > 4:
         # start follow line
         edge.lineControl(0.2, True)
-        service.send("robobot/cmd/T0","servo 1 0 0") # (move servo to position 0 - front)
         dist_to_line = pose.tripB
         pose.tripBreset()
         print(" to state 10")
@@ -151,7 +147,6 @@ def driveToLine():
     else:
       print(f"# drive to line {dist_to_line:.3f}m, then along line {pose.tripB:.3f}m in {pose.tripBtimePassed():.3f} seconds")
       service.send("robobot/cmd/ti","rc 0.0 0.0") # (forward m/s, turn-rate rad/sec)
-      service.send("robobot/cmd/T0","servo 1 500 200") # (move servo down slow)
       break;
     # print(f"# drive {state}, now {pose.tripB:.3f}m in {pose.tripBtimePassed():.3f} seconds, line valid cnt = {edge.lineValidCnt}")
     t.sleep(0.01)
@@ -203,6 +198,8 @@ def loop():
     state = 102 # turn 180 deg
   elif service.args.edge:
     state = 103 # find edge and follow line
+  elif service.args.servo:
+    state = 104 # move servo
   elif service.args.usestate > 0:
     state = service.args.usestate
   print(f"% Starting at state {state}")
@@ -217,7 +214,6 @@ def loop():
         print("% Starting")
         service.send("robobot/cmd/T0","leds 16 0 0 30") # blue: running
         service.send("robobot/cmd/ti","rc 0.25 0.0") # (forward m/s, turn-rate rad/sec)
-        service.send("robobot/cmd/T0","servo 1 100 300") # (servo down slow)
         state = 12 # until no more line
         pose.tripBreset() # use trip counter/timer B
     elif state == 12: # following line
@@ -226,13 +222,11 @@ def loop():
         edge.lineControl(0, True) # stop following line
         pose.tripBreset()
         service.send("robobot/cmd/ti","rc 0.1 0.5") # turn left
-        service.send("robobot/cmd/T0","servo 1 -800 1000") # (servo up faster)
         state = 14 # turn left
     elif state == 14: # turning left
       if pose.tripBh > np.pi/2 or pose.tripBtimePassed() > 10:
         state = 20 # finished
         service.send("robobot/cmd/ti","rc 0 0") # stop for images
-        service.send("robobot/cmd/T0","servo 1 0 1000") # (servo forward faster)
       # print(f"% --- state {state}, h = {pose.tripBh:.4f}, t={pose.tripBtimePassed():.3f}")
     elif state == 20: # image analysis
       imageAnalysis(images == 2)
@@ -258,6 +252,9 @@ def loop():
       state = 100
     elif state == 103:
       driveToLine()
+      state = 100
+    elif state == 104:
+      servo.servo_change_position(-1000)
       state = 100
     else: # abort
       print(f"% Mission finished/aborted; state={state}")
@@ -288,7 +285,6 @@ def loop():
   gpio.set_value(20, 0)
   edge.lineControl(0, True) # stop following line
   service.send("robobot/cmd/ti","rc 0 0")
-  service.send("robobot/cmd/T0","servo 1 0 0")
   t.sleep(0.05)
   pass
 
