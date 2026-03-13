@@ -9,6 +9,9 @@ from spose import pose
 from simu import imu
 from sgpio import gpio
 from srobot import robot
+from motion_helper import turn_with_feedback
+from sservo import servo
+
 
 # Line-follow tuning
 FOLLOW_SPEED = 0.20
@@ -17,6 +20,12 @@ CLIMB_SPEED = 0.08
 CLIMB_TIMEOUT = 3.0           # sec safety timeout
 LINE_VALID_MIN = 4
 LOST_DEBOUNCE_COUNT = 8      # consecutive invalid reads before stop
+
+# Post-flat maneuver tuning
+POST_TURN_DEG = -60
+POST_CIRCLE_RADIUS_M = 0.32
+POST_CIRCLE_SPEED_M_S = 0.12
+POST_TURN_RATE_DEG_S = 45.0
 
 # Flat detection tuning 
 RUN_MAX_GYRO_DPS = 20.0
@@ -28,6 +37,40 @@ ACC_G_MAX = 1.3
 STATE_SEARCHING = 0
 STATE_FOLLOWING = 10
 STATE_CLIMB_TO_FLAT = 20
+STATE_ROUNDABOUT = 30
+
+
+def roundabout():
+    """After reaching the flat area: turn right 60 deg and drive one left circle."""
+    if service.stop or gpio.test_stop_button():
+        service.stop = True
+        print("% mission-run: stop requested before roundabout")
+        return
+
+    print(f"% mission-run: post-flat maneuver -> turn {POST_TURN_DEG} deg")
+    turn_with_feedback(POST_TURN_DEG, turn_rate_deg_s=POST_TURN_RATE_DEG_S, forward_m_s=0.0, stop_after=True)
+
+    if service.stop or gpio.test_stop_button():
+        service.stop = True
+        print("% mission-run: stop requested after turn")
+        return
+
+    omega_rad_s = POST_CIRCLE_SPEED_M_S / POST_CIRCLE_RADIUS_M
+    circle_time_s = (2.0 * 3.141592653589793 * POST_CIRCLE_RADIUS_M) / POST_CIRCLE_SPEED_M_S
+
+    print(
+        f"% mission-run: left circle speed={POST_CIRCLE_SPEED_M_S:.3f} m/s, "
+        f"omega={omega_rad_s:.3f} rad/s, t={circle_time_s:.2f} s"
+    )
+    service.send("robobot/cmd/ti", f"rc {POST_CIRCLE_SPEED_M_S:.3f} {omega_rad_s:.3f}")
+    end_time = t.monotonic() + circle_time_s
+    while t.monotonic() < end_time and not service.stop:
+        if gpio.test_stop_button():
+            service.stop = True
+            print("% mission-run: stop requested during circle")
+            break
+        t.sleep(min(0.02, end_time - t.monotonic()))
+    service.send("robobot/cmd/ti", "rc 0.0 0.0")
 
 
 def set_line_leds(r, g, b):
@@ -133,11 +176,16 @@ def loop():
                         f"% mission-run: flat reached, tilt={tilt_deg:.1f}, "
                         f"gyro={gyro_norm:.2f}, acc={acc_norm:.2f}, dist={pose.tripB:.3f}"
                     )
-                    break
+                    state = STATE_ROUNDABOUT
 
             if pose.tripBtimePassed() > CLIMB_TIMEOUT:
                 print(f"% mission-run: climb timeout after {pose.tripB:.3f} m -> stopping")
-                break
+                state = STATE_ROUNDABOUT
+                
+            
+        elif state == STATE_ROUNDABOUT:
+            roundabout()
+            break 
 
         t.sleep(0.05)
 
@@ -167,6 +215,7 @@ if __name__ == "__main__":
             )
             indicator_thread.start()
             calibrate_before_run()
+            servo.servo_change_position(-900)
             loop()
     finally:
         indicator_stop.set()
