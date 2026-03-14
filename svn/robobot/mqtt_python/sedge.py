@@ -69,8 +69,8 @@ class SEdge:
     lineCtrl = False # private
     # try with a P-Lead controller
     lineKp = 1.0 # 5  (rad/s per sensor value)
-    lineTauZ = 0.8 # 0.8 (second)
-    lineTauP = 0.25 # 0.15 (second)
+    lineTauZ = 1 # 0.8 (second)
+    lineTauP = 0.23 # 0.15 (second)
     # Lead pre-calculated factors
     tauP2pT = 1.0
     tauP2mT = 0.0
