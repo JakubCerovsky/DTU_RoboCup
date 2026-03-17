@@ -61,6 +61,12 @@ class SEdge:
     average = 0
     high = 0 # highest reflectivity
     low = 0  # the darkest value found in latest sample
+    lineWidth = 0.0
+    brightSegments = 0
+    splitDetected = False
+    intersectionDetected = False
+    justPassedIntersection = False
+    wasCrossingLine = False
     #
     topicLip = ""
     sendCalibRequest = False
@@ -69,8 +75,8 @@ class SEdge:
     lineCtrl = False # private
     # try with a P-Lead controller
     lineKp = 1.0 # 5  (rad/s per sensor value)
-    lineTauZ = 1 # 0.8 (second)
-    lineTauP = 0.23 # 0.15 (second)
+    lineTauZ = 0.8 # changed from 0.8 (second)
+    lineTauP = 0.25 # changed from 0.25 (second)
     # Lead pre-calculated factors
     tauP2pT = 1.0
     tauP2mT = 0.0
@@ -287,6 +293,7 @@ class SEdge:
       # print(f"% Edge (sedge.py):: {low}, {high} - what")
       # average white level
       self.average = sum / 8.0;
+      oldCrossingLine = self.crossingLine
       # detect if we have a crossing line
       self.crossingLine = self.average >= self.crossingThreshold
       # is line valid (high above threshold)
@@ -312,9 +319,26 @@ class SEdge:
               break;
         self.posLeft = posLeft
         self.posRight = posRight
+        self.lineWidth = self.posRight - self.posLeft
       else:
         # just keep old value
         pass
+      #
+      # detect bright segments for split/intersection detection
+      brightSegments = 0
+      inSegment = False
+      for i in range(8):
+        if self.edge_n[i] >= self.lineValidThreshold:
+          if not inSegment:
+            brightSegments += 1
+            inSegment = True
+        else:
+          inSegment = False
+      self.brightSegments = brightSegments
+      # split if more than 1 bright segment
+      self.splitDetected = brightSegments > 1
+      # intersection if wide line or all bright
+      self.intersectionDetected = (self.lineWidth > 4.0) or (brightSegments == 1 and self.average >= self.crossingThreshold)
       #
       if self.lineValid and self.lineValidCnt < 20:
         self.lineValidCnt += 1
@@ -330,7 +354,7 @@ class SEdge:
         if self.crossingLineCnt < 0:
           self.crossingLineCnt = 0
       pass
-      # print(f"% Edge (sedge.py):: ({self.edge_n[0]} {self.edge_n[1]} {self.edge_n[2]} {self.edge_n[3]} {self.edge_n[4]} {self.edge_n[5]} {self.edge_n[6]}), high={self.high}, left={self.posLeft:.2f}, right={self.posRight:.2f}.")
+    #   # print(f"% Edge (sedge.py):: ({self.edge_n[0]} {self.edge_n[1]} {self.edge_n[2]} {self.edge_n[3]} {self.edge_n[4]} {self.edge_n[5]} {self.edge_n[6]}), high={self.high}, left={self.posLeft:.2f}, right={self.posRight:.2f}.")
 
     ##########################################################
 

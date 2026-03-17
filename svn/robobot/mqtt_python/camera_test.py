@@ -12,8 +12,8 @@ LOWER_ORANGE = np.array([5, 150, 100])
 UPPER_ORANGE = np.array([25, 255, 255])
 
 # Distance Thresholds (Area in pixels - adjust based on your camera)
-AREA_1 = 7000        # Estimated area at 20cm distance
-AREA_2 = 11550       # Final target area at 15cm distance
+AREA_1 = 6400        # Estimated area at 20cm distance
+AREA_2 = 10000       # Final target area at 15cm distance
 CENTER_TOLERANCE = 20   # Narrower tolerance for the precision phase
 
 # Speed Settings
@@ -32,7 +32,6 @@ def flash_leds(count=5):
         t.sleep(0.15)
 
 def loop():
-    servo.servo_change_position(-900)
     state = "SEARCHING"
     
     try:
@@ -88,7 +87,7 @@ def loop():
                 # PHASE 3: Target Reached (10cm total)
                 else:
                     service.send("robobot/cmd/ti", "rc 0.00 0.00")
-                    servo.servo_change_position(200)
+                    servo.servo_change_position(210)
                     flash_leds()
                     break
             else:
