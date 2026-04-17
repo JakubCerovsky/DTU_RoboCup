@@ -280,7 +280,7 @@ class UService:
 
   def send(self, topic, param):
     # print(self.startTime.strftime("At %Y-%m-%d %H:%M:%S.%f"))
-    print(f"% {self.startTime.strftime("At %Y-%m-%d %H:%M:%S.%f")}: sending: '{topic}' with '{param}' len(param)={len(param)}, not master {self.confirmedNotMaster}, master {self.confirmedMaster}")
+    # print(f"% {self.startTime.strftime("At %Y-%m-%d %H:%M:%S.%f")}: sending: '{topic}' with '{param}' len(param)={len(param)}, not master {self.confirmedNotMaster}, master {self.confirmedMaster}")
     if self.confirmedNotMaster:
       # self.terminate()
       self.stop = True

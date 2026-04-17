@@ -33,17 +33,18 @@ K_P_TURN = 0.0025        # High gain for snappy centering
 # Line-follow tuning
 FOLLOW_SPEED = 0.2
 SEARCH_SPEED = 0.2
+GO_STRAIGHT_SPEED = 0.2
 CLIMB_SPEED = 0.2
-REVERSE_SPEED = -0.2
+REVERSE_SPEED = -0.1
 CLIMB_TIMEOUT = 2         # sec safety timeout
 LINE_VALID_MIN = 4
-LOST_DEBOUNCE_COUNT = 8      # consecutive invalid reads before stop
+LOST_DEBOUNCE_COUNT = 6      # consecutive invalid reads before stop
 
 # Post-flat maneuver tuning
 POST_TURN_DEG = -60
 POST_CIRCLE_RADIUS_M = 0.32
 POST_CIRCLE_SPEED_M_S = 0.12
-ROUNDABOUT_DEG = 320
+POST_ROUNDABOUT_DEG = 320
 POST_TURN_RATE_DEG_S = 45.0
 POST_SEARCH_TURN_DEG = -15
 POST_SEARCH_TURN_FORWARD_SPEED = 0.06
@@ -57,6 +58,12 @@ RUN_MAX_TILT_DEG = 2.3
 ACC_G_MIN = 0.7
 ACC_G_MAX = 1.3
 
+# second rounabout 
+SEC_ROUNDABOUT_RADIUS_M = 0.8
+SEC_BEFORE_ROUNDABOUT_TURN_DEG = -90
+SEC_ROUNDABOUT_TURN_DEG = 90
+SEC_CIRCLE_SPEED_M_S = 0.3
+
 # states
 STATE_SEARCHING = 0
 STATE_FOLLOWING = 10
@@ -66,9 +73,10 @@ STATE_FIND_LINE_AFTER_ROUNDABOUT = 40
 STATE_FOLLOWING_AFTER_ROUNDABOUT = 50
 STATE_LOCATE_BALL = 60
 STATE_LOCATE_HOLE = 70
-STATE_FOLLOWING_UNTIL_ROUNDABOUT = 80
+STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO = 80
 STATE_ROUNDABOUT_TWO = 90
-STATE_GO_TO_END = 100
+STATE_FIND_LINE_AFTER_ROUNDABOUT_TWO = 100
+STATE_GO_TO_END = 110
 
 
 def stop_requested():
@@ -79,25 +87,24 @@ def stop_requested():
     return service.stop
 
 
-def roundabout(roundabout_deg, post_turn_deg):
+def roundabout(roundabout_deg, pre_manouver_turn , radius_m, speed_m_s):
     """After reaching the flat area: turn right 60 deg and drive one left circle."""
     if stop_requested():
         return
 
-    print(f"% mission-run: post-flat maneuver -> turn {POST_TURN_DEG} deg")
-    turn_with_feedback(POST_TURN_DEG, turn_rate_deg_s=post_turn_deg, forward_m_s=0.0, stop_after=True)
-
+    turn_with_feedback(pre_manouver_turn, turn_rate_deg_s=pre_manouver_turn, forward_m_s=0.0, stop_after=True)
+    print(f"% roundabout first turn done -> turn with feedback {pre_manouver_turn} deg/s ")
     if stop_requested():
         return
 
-    omega_rad_s = POST_CIRCLE_SPEED_M_S / POST_CIRCLE_RADIUS_M
+    omega_rad_s = speed_m_s / radius_m
     circle_time_s = (
         (roundabout_deg / 360.0)
-        * (2.0 * math.pi * POST_CIRCLE_RADIUS_M)
-        / POST_CIRCLE_SPEED_M_S
+        * (2.0 * math.pi * radius_m)
+        / speed_m_s
     )
     
-    service.send("robobot/cmd/ti", f"rc {POST_CIRCLE_SPEED_M_S:.3f} {omega_rad_s:.3f}")
+    service.send("robobot/cmd/ti", f"rc {speed_m_s:.3f} {omega_rad_s:.3f}")
     end_time = t.monotonic() + circle_time_s
     while t.monotonic() < end_time and not service.stop:
         if stop_requested():
@@ -202,17 +209,19 @@ def locate_ball(contours, img_center_x):
 
 def loop():
     print("% mission-run: start")
-    state = STATE_LOCATE_HOLE
+    state = STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO
     lost_count = 0
     searching = False
     post_roundabout_started = False 
+    go_to_end_initialized = False
+    go_to_end_timer = None
 
     edge.lineControl(0, True)
 
     while not service.stop:
         if stop_requested():
             break
-
+            
         if state == STATE_SEARCHING:
             # Move slowly forward while searching for a valid line.
             if not searching:
@@ -263,7 +272,10 @@ def loop():
                 
             
         elif state == STATE_ROUNDABOUT:
-            roundabout(ROUNDABOUT_DEG, POST_TURN_RATE_DEG_S)
+            roundabout(POST_ROUNDABOUT_DEG,
+                POST_TURN_DEG,
+                radius_m=POST_CIRCLE_RADIUS_M,
+                speed_m_s=POST_CIRCLE_SPEED_M_S)
             if service.stop:
                 break
             state = STATE_FIND_LINE_AFTER_ROUNDABOUT
@@ -355,41 +367,92 @@ def loop():
             mask = cv.inRange(hsv, LOWER_ORANGE, UPPER_ORANGE)
             contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
             locate_ball(contours, img_center_x)
-            state = STATE_FOLLOWING_UNTIL_ROUNDABOUT
+            state = STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO
             
-        elif state == STATE_LOCATE_HOLE:
-            edge.lineControl(FOLLOW_SPEED)
-            state = STATE_FOLLOWING_UNTIL_ROUNDABOUT
+            #  here is missing the code from testing_ball_hole, when that is finished put here until it gets line and starts to follow on the left
             
-        elif state == STATE_FOLLOWING_UNTIL_ROUNDABOUT:
-            if edge.intersectionDetected:
-                edge.lineControl(0)
-                service.send("robobot/cmd/ti", f"rc {FOLLOW_SPEED:.2f} 0.00")
-                t.sleep(0.05)
-                edge.lineControl(FOLLOW_SPEED)
-            
+        elif state == STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO:
+            edge.lineControl(FOLLOW_SPEED, True)
             if edge.lineValidCnt > LINE_VALID_MIN:
                 lost_count = 0
             else:
                 lost_count += 1
                 if lost_count >= LOST_DEBOUNCE_COUNT:
-                    print("% mission-run: line lost -> climb to platform")
+                    print("% mission-run: line lost -> go reverse")
                     edge.lineControl(0, True)
-                    pose.tripBreset()
+                    # reverse a bit to give more space for the turn
                     service.send("robobot/cmd/ti", f"rc {REVERSE_SPEED:.2f} 0.00")
-                    state = STATE_CLIMB_TO_FLAT
-                state = STATE_ROUNDABOUT_TWO
+                    t.sleep(2)
+                    state = STATE_ROUNDABOUT_TWO
                 
         elif state == STATE_ROUNDABOUT_TWO:
-            roundabout(40, POST_TURN_RATE_DEG_S)
-            if service.stop:
-                break
-            state = STATE_FIND_LINE_AFTER_ROUNDABOUT
-            post_roundabout_started = True
-            searching = False
+            print("% mission-run: second roundabout -> turn and circle")
+            roundabout(SEC_ROUNDABOUT_TURN_DEG, SEC_BEFORE_ROUNDABOUT_TURN_DEG , radius_m=SEC_ROUNDABOUT_RADIUS_M, speed_m_s=SEC_CIRCLE_SPEED_M_S)
+            state = STATE_FIND_LINE_AFTER_ROUNDABOUT_TWO
+            searching = True
+            edge.lineControl(0, False)
             
+        elif state == STATE_FIND_LINE_AFTER_ROUNDABOUT_TWO:
+            if searching:
+                if edge.lineValidCnt <= LINE_VALID_MIN:
+                    # No valid line yet: drive straight to reacquire it.
+                    service.send("robobot/cmd/ti", f"rc {GO_STRAIGHT_SPEED:.2f} 0.00")
+                else:
+                    # Line found: switch back to normal line following.
+                    print("% mission-run: line found after second roundabout -> follow line")
+                    service.send("robobot/cmd/ti", "rc 0.0 0.0")
+                    searching = False
+            else:
+                edge.lineControl(FOLLOW_SPEED, False)
+                t.sleep(0.5)  # small delay to allow lineValidCnt to update
+                if edge.intersectionDetected:
+                    print("% mission-run: intersection detected after second roundabout -> go to end")
+                    edge.lineControl(0, False)
+                    service.send("robobot/cmd/ti", "rc 0.0 0.0")
+                    state = STATE_GO_TO_END
+
         elif state == STATE_GO_TO_END:
-            service.send("robobot/cmd/ti", f"rc {SEARCH_SPEED:.2f} 0.00")
+            # Initialize: turn left 90 deg and go straight for 3 seconds, ignoring everything
+            if not go_to_end_initialized:
+                print("% mission-run: going to end - turning left 90 deg")
+                turn_with_feedback(110, turn_rate_deg_s=110, forward_m_s=0.0, stop_after=True)
+                if stop_requested():
+                    break
+                
+                print("% mission-run: going straight for 3 seconds (ignore all)")
+                service.send("robobot/cmd/ti", f"rc {GO_STRAIGHT_SPEED:.2f} 0.00")
+                go_to_end_timer = t.monotonic() + 3.0
+                go_to_end_initialized = True
+            
+            # Phase 1: Go straight for 3 seconds without checking anything
+            elif go_to_end_timer is not None and t.monotonic() < go_to_end_timer:
+                # Just keep going straight, ignore everything
+                pass
+            
+            # Phase 2: After 3 seconds, go straight until line found
+            else:
+                if go_to_end_timer is not None:
+                    print("% mission-run: 3 seconds done - searching for line")
+                    edge.lineControl(0, True)
+                    service.send("robobot/cmd/ti", f"rc {GO_STRAIGHT_SPEED:.2f} 0.00")
+                    go_to_end_timer = None
+                
+                # Go straight until line is found
+                if edge.lineValidCnt <= LINE_VALID_MIN:
+                    # Still searching for line
+                    service.send("robobot/cmd/ti", f"rc {GO_STRAIGHT_SPEED:.2f} 0.00")
+                else:
+                    # Line found! Switch to following on left
+                    print("% mission-run: line found at end -> following on left")
+                    service.send("robobot/cmd/ti", "rc 0.0 0.0")
+                    edge.lineControl(FOLLOW_SPEED, True)  # Follow on left
+                    t.sleep(0.5)  # small delay to allow lineValidCnt to update
+                    lost_count = 0
+                
+                # When intersection detected, switch to follow right
+                if edge.intersectionDetected:
+                    print("% mission-run: intersection detected at end -> follow right line to goal")
+                    edge.lineControl(FOLLOW_SPEED, False)  # Follow on right
             
         t.sleep(0.05)
 
@@ -418,7 +481,7 @@ if __name__ == "__main__":
                 daemon=True,
             )
             indicator_thread.start()
-            calibrate_before_run()
+            # calibrate_before_run()
             loop()
     finally:
         indicator_stop.set()
