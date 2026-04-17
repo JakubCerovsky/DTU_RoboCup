@@ -7,17 +7,17 @@ from uservice import service
 
 def robot_jiggle():
     print("% >>> JIGGLE! Target Identified!")
-    # Avanti veloce per 0.1 secondi
+    # Fast forward for 0.1 seconds
     service.send("robobot/cmd/ti", "rc 0.20 0.00")
     t.sleep(0.1)
-    # Indietro veloce per 0.1 secondi
+    # Fast backward for 0.1 seconds
     service.send("robobot/cmd/ti", "rc -0.20 0.00")
     t.sleep(0.1)
     # Stop
     service.send("robobot/cmd/ti", "rc 0.00 0.00")
 
 def loop():
-    # Parametri di filtraggio validati dai tuoi test
+    # Filtering parameters validated by your tests
     MIN_AREA = 2500
     CIRC_MIN = 0.60
     CIRC_MAX = 0.95
@@ -34,10 +34,10 @@ def loop():
             continue
 
         h, w = img.shape[:2]
-        # Taglia il primo 40% dell'altezza
+        # Crop the first 40% of the height
         roi = img[int(h*0.40):, :]
         
-        # Pre-processing potenziato
+        # Enhanced pre-processing
         gray = cv.cvtColor(roi, cv.COLOR_BGR2GRAY)
         blurred = cv.GaussianBlur(gray, (11, 11), 0)
         edged = cv.Canny(blurred, 30, 50)
@@ -59,18 +59,18 @@ def loop():
             x, y, w_box, h_box = cv.boundingRect(cnt)
             aspect_ratio = float(w_box) / h_box
 
-            # Logica di riconoscimento
+            # Recognition logic
             if CIRC_MIN < circularity < CIRC_MAX and ASPECT_MIN < aspect_ratio < ASPECT_MAX:
-                # ABBIAMO TROVATO IL BUCO!
-                # 1. Feedback visivo
+                # WE FOUND THE HOLE!
+                # 1. Visual feedback
                 cv.rectangle(roi, (x, y), (x + w_box, y + h_box), (0, 255, 0), 3)
                 cv.imshow('Test Hole', roi)
                 cv.waitKey(1)
                 
-                # 2. Feedback fisico (Sussulto)
+                # 2. Physical feedback (Jolt)
                 robot_jiggle()
                 
-                # 3. Segnale visivo con LED
+                # 3. Visual signal with LED
                 service.send("robobot/cmd/T0", "leds 16 0 30 0") 
                 
                 target_found = True

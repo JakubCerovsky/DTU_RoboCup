@@ -45,7 +45,7 @@ class SEdge:
     edge_nInterval = 0
     edgeIntervalSetup = 0.1
     # line detection levels
-    lineValidThreshold = 750 # 1000 is calibrated white
+    lineValidThreshold = 800 # 1000 is calibrated white orginially 750
     crossingThreshold = 700 # average above this is assumed to be crossing line
     # level for relevant white values
     low = lineValidThreshold - 100;
@@ -74,9 +74,9 @@ class SEdge:
     # follow line controller
     lineCtrl = False # private
     # try with a P-Lead controller
-    lineKp = 1.0 # 5  (rad/s per sensor value)
-    lineTauZ = 0.8 # changed from 0.8 (second)
-    lineTauP = 0.25 # changed from 0.25 (second)
+    lineKp = 0.7 # 5  (rad/s per sensor value) # changed from 1
+    lineTauZ = 1.5 # changed from 0.8 (second)
+    lineTauP = 0.05 # changed from 0.25 (second)
     # Lead pre-calculated factors
     tauP2pT = 1.0
     tauP2mT = 0.0
@@ -280,51 +280,52 @@ class SEdge:
     ##########################################################
 
     def LineDetect(self):
-      sum = 0
-      posSum = 0
+      # Calculate average and max (high) value
+      total = 0
       high = int(1)
-      # find levels (and average)
-      # using normalised readings (0 (no reflection) to 1000 (calibrated white)))
       for i in range(8):
-        sum += self.edge_n[i] # for average
+        total += self.edge_n[i]
         if self.edge_n[i] > high:
-          high = self.edge_n[i] # most bright value (floor level)
-      self.high = high # most white level
-      # print(f"% Edge (sedge.py):: {low}, {high} - what")
-      # average white level
-      self.average = sum / 8.0;
-      oldCrossingLine = self.crossingLine
-      # detect if we have a crossing line
+          high = self.edge_n[i]
+      self.high = high
+      self.average = total / 8.0
+
+      # Detect crossing line (wide/intersection)
       self.crossingLine = self.average >= self.crossingThreshold
-      # is line valid (high above threshold)
+
+      # Detect valid line (narrow, any sensor)
       self.lineValid = self.high >= self.lineValidThreshold
-      # find line position
-      # from left side - stop at first value above half of the brightest
+
+      # Print debug info (like test_follow_line)
+      # if self.lineValid:
+      #   print(f"% Edge::LineDetect: line detected (high={self.high}, avg={self.average:.1f})")
+      # else:
+      #   print(f"% Edge::LineDetect: line lost (high={self.high}, avg={self.average:.1f})")
+
+      # Find line position (left/right)
       if self.lineValid:
-        posLeft = -3.5 # max left
+        posLeft = -3.5
         if self.edge_n[0] < self.lineValidThreshold:
-          posLeft = -3 # between sensor 1 and 2 or more right
-          for i in range(1,8):
+          posLeft = -3
+          for i in range(1, 8):
             if self.edge_n[i] < self.lineValidThreshold:
-              posLeft += 1;
+              posLeft += 1
             else:
-              break;
-        posRight = 3.5 # max right
+              break
+        posRight = 3.5
         if self.edge_n[7] < self.lineValidThreshold:
-          posRight = 3 # may be between sensor 8 and 7 or more left
-          for i in range(1,8):
-            if self.edge_n[7-i] < self.lineValidThreshold:
-              posRight -= 1;
+          posRight = 3
+          for i in range(1, 8):
+            if self.edge_n[7 - i] < self.lineValidThreshold:
+              posRight -= 1
             else:
-              break;
+              break
         self.posLeft = posLeft
         self.posRight = posRight
         self.lineWidth = self.posRight - self.posLeft
-      else:
-        # just keep old value
-        pass
-      #
-      # detect bright segments for split/intersection detection
+      # else: keep old posLeft/posRight
+
+      # Detect bright segments for split/intersection
       brightSegments = 0
       inSegment = False
       for i in range(8):
@@ -335,11 +336,10 @@ class SEdge:
         else:
           inSegment = False
       self.brightSegments = brightSegments
-      # split if more than 1 bright segment
       self.splitDetected = brightSegments > 1
-      # intersection if wide line or all bright
       self.intersectionDetected = (self.lineWidth > 4.0) or (brightSegments == 1 and self.average >= self.crossingThreshold)
-      #
+
+      # Debounced counters
       if self.lineValid and self.lineValidCnt < 20:
         self.lineValidCnt += 1
       elif not self.lineValid:
@@ -353,8 +353,7 @@ class SEdge:
         self.crossingLineCnt -= 1
         if self.crossingLineCnt < 0:
           self.crossingLineCnt = 0
-      pass
-    #   # print(f"% Edge (sedge.py):: ({self.edge_n[0]} {self.edge_n[1]} {self.edge_n[2]} {self.edge_n[3]} {self.edge_n[4]} {self.edge_n[5]} {self.edge_n[6]}), high={self.high}, left={self.posLeft:.2f}, right={self.posRight:.2f}.")
+      # print(f"% Edge (sedge.py):: ({self.edge_n[0]} {self.edge_n[1]} {self.edge_n[2]} {self.edge_n[3]} {self.edge_n[4]} {self.edge_n[5]} {self.edge_n[6]}), high={self.high}, left={self.posLeft:.2f}, right={self.posRight:.2f}.")
 
     ##########################################################
 
@@ -403,8 +402,8 @@ class SEdge:
       # debug end
       service.send("robobot/cmd/ti", par) # send new turn command, maintaining velocity
       # debug print
-      if True: # self.edge_nUpdCnt % 20 == 0:
-        print(f"% Edge::followLine: ctrl: e={e:.3f}, u={self.u:.3f}, y={self.lineY:.3f}, cnt {self.lineValidCnt}, -> {par}")
+      # if True: # self.edge_nUpdCnt % 20 == 0:
+      #   print(f"% Edge::followLine: ctrl: e={e:.3f}, u={self.u:.3f}, y={self.lineY:.3f}, cnt {self.lineValidCnt}, -> {par}")
 
     ##########################################################
 
@@ -419,6 +418,23 @@ class SEdge:
       print(f"%% Lead: tauZ {self.lineTauZ:.3f} sec, tauP = {self.lineTauP:.3f} sec, T = {self.edge_nInterval:.3f} ms\n")
       print(f"%%       tauZ2pT = {self.tauZ2pT:.4f}, tauZ2mT = {self.tauZ2mT:.4f}, tauP2pT = {self.tauP2pT:.4f}, tauP2mT = {self.tauP2pT:.4f}")
 
+
+    ##########################################################
+
+    def calibrateLineSensor(self, samples = 100):
+      from uservice import service
+
+      """Calibrate and save white reference using licw then eew on robobot/cmd/T0."""
+
+      if not service.connected:
+        print("% Edge::calibrateLineSensor: MQTT not connected")
+        return False
+
+      topic = "robobot/cmd/T0"
+      print(f"% Edge::calibrateLineSensor: licw {samples} -> eew")
+      service.send(topic, f"licw {samples}")
+      service.send(topic, "eew")
+      return True
 
     ##########################################################
 

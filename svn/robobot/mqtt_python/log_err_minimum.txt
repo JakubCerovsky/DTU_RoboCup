@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/local/svn/robobot/mqtt_python/minimum_run.py", line 423, in <module>
+    loop()
+    ~~~~^^
+  File "/home/local/svn/robobot/mqtt_python/minimum_run.py", line 334, in loop
+    turn_with_feedback(90, turn_rate_deg_s=0, forward_m_s=0.0, stop_after=True)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/local/svn/robobot/mqtt_python/motion_helper.py", line 59, in turn_with_feedback
+    raise ValueError("turn_rate_deg_s must be non-zero")
+ValueError: turn_rate_deg_s must be non-zero
+Traceback (most recent call last):
+  File "/home/local/svn/robobot/mqtt_python/minimum_run.py", line 422, in <module>
+    loop()
+    ~~~~^^
+  File "/home/local/svn/robobot/mqtt_python/minimum_run.py", line 334, in loop
+    turn_with_feedback(90, turn_rate_deg_s=0, forward_m_s=0.0, stop_after=True)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/local/svn/robobot/mqtt_python/motion_helper.py", line 59, in turn_with_feedback
+    raise ValueError("turn_rate_deg_s must be non-zero")
+ValueError: turn_rate_deg_s must be non-zero

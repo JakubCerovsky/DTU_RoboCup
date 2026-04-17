@@ -7,7 +7,7 @@
 
 class SServo:
     MAX_POS_UP = -900
-    MAX_POS_DOWN = 210
+    MAX_POS_DOWN = 250
     SPEED = 200
     
     def setup(self):

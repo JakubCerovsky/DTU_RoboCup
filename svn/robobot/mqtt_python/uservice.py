@@ -121,6 +121,7 @@ class UService:
     # do the setup and check of data streams
     # enable interface logging (into teensy_interface/build/log_2025...)
     service.send("robobot/cmd/ti", "log 1")
+    servo.setup()
     gpio.setup()
     robot.setup()
     ir.setup()
@@ -128,7 +129,6 @@ class UService:
     imu.setup()
     cam.setup()
     edge.setup()
-    servo.setup()
     print(f"% (uservice.py) Setup finished with connected={self.connected}")
     if self.args.level:
       print(f"% Command line argument '--level'={self.args.level} but not implemented")

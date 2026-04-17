@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/local/svn/robobot/mqtt_python/half_way_competition.py", line 9, in <module>
+    from uservice import service
+  File "/home/local/svn/robobot/mqtt_python/uservice.py", line 43, in <module>
+    from sedge import edge
+  File "/home/local/svn/robobot/mqtt_python/sedge.py", line 30, in <module>
+    from uservice import service
+ImportError: cannot import name 'service' from 'uservice' (consider renaming '/home/local/svn/robobot/mqtt_python/uservice.py' if it has the same name as a library you intended to import)

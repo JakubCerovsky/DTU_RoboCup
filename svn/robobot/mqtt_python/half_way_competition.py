@@ -21,22 +21,22 @@ UPPER_ORANGE = np.array([25, 255, 255])
 
 # Distance Thresholds (Area in pixels - adjust based on your camera)
 AREA_1 = 6400        # Estimated area at 20cm distance
-AREA_2 = 10000       # Final target area at 15cm distance
+AREA_2 = 10200       # Final target area at 15cm distance
 CENTER_TOLERANCE = 20   # Narrower tolerance for the precision phase
 
-# Speed Settings
+# Speed Settings during ball searching
 SEARCH_TURN_SPEED = 0.30 # High speed rotation for searching
 FAST_APPROACH = 0.10    # Fast speed to reach the 15cm mark
 SLOW_APPROACH = 0.050     # Precision speed for the final 5cm
 K_P_TURN = 0.0025        # High gain for snappy centering
 
 # Line-follow tuning
-FOLLOW_SPEED = 0.2
+FOLLOW_SPEED = 0.4
 SEARCH_SPEED = 0.2
-CLIMB_SPEED = 0.2
-CLIMB_TIMEOUT = 2         # sec safety timeout
+CLIMB_SPEED = 0.14
+CLIMB_TIMEOUT = 3         # sec safety timeout
 LINE_VALID_MIN = 4
-LOST_DEBOUNCE_COUNT = 8      # consecutive invalid reads before stop
+LOST_DEBOUNCE_COUNT = 10      # consecutive invalid reads before losing the line
 
 # Post-flat maneuver tuning
 POST_TURN_DEG = -60
@@ -44,7 +44,7 @@ POST_CIRCLE_RADIUS_M = 0.32
 POST_CIRCLE_SPEED_M_S = 0.12
 ROUNDABOUT_DEG = 320
 POST_TURN_RATE_DEG_S = 45.0
-POST_SEARCH_TURN_DEG = -15
+POST_SEARCH_TURN_DEG = -1
 POST_SEARCH_TURN_FORWARD_SPEED = 0.06
 POST_SEARCH_STRAIGHT_SPEED = 0.2
 POST_SEARCH_STRAIGHT_TIME_S = 3
@@ -52,7 +52,7 @@ POST_SEARCH_LEFT_TURN_RAD_S = 0.25
 
 # Flat detection tuning 
 RUN_MAX_GYRO_DPS = 20.0
-RUN_MAX_TILT_DEG = 2.3
+RUN_MAX_TILT_DEG = 2.5
 ACC_G_MIN = 0.7
 ACC_G_MAX = 1.3
 
@@ -305,17 +305,6 @@ def loop():
                 print("% mission-run: state 40 -> 50 (follow right line)")
                 
         elif state == STATE_FOLLOWING_AFTER_ROUNDABOUT:
-            if edge.lineValidCnt > LINE_VALID_MIN:
-                lost_count = 0
-            else:
-                lost_count += 1
-                if lost_count >= LOST_DEBOUNCE_COUNT:
-                    print("% mission-run: line lost after roundabout -> stopping")
-                    edge.lineControl(0, True)
-                    service.send("robobot/cmd/ti", "rc 0.0 0.0")
-                    service.stop = True
-                    break
-                
             if edge.splitDetected:
                 print("% mission-run: second branch/split detected -> locate ball")
                 edge.lineControl(0, True)

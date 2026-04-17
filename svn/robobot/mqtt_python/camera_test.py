@@ -13,7 +13,7 @@ UPPER_ORANGE = np.array([25, 255, 255])
 
 # Distance Thresholds (Area in pixels - adjust based on your camera)
 AREA_1 = 6400        # Estimated area at 20cm distance
-AREA_2 = 10000       # Final target area at 15cm distance
+AREA_2 = 10200       # Final target area at 15cm distance
 CENTER_TOLERANCE = 20   # Narrower tolerance for the precision phase
 
 # Speed Settings
