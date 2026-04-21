@@ -31,13 +31,13 @@ SLOW_APPROACH = 0.050     # Precision speed for the final 5cm
 K_P_TURN = 0.0025        # High gain for snappy centering
 
 # Line-follow tuning
-FOLLOW_SPEED = 0.2
+FOLLOW_SPEED = 0.3
 SEARCH_SPEED = 0.2
 GO_STRAIGHT_SPEED = 0.2
 CLIMB_SPEED = 0.2
 REVERSE_SPEED = -0.1
 CLIMB_TIMEOUT = 2         # sec safety timeout
-LINE_VALID_MIN = 4
+LINE_VALID_MIN = 1
 LOST_DEBOUNCE_COUNT = 6      # consecutive invalid reads before stop
 
 # Post-flat maneuver tuning
@@ -73,10 +73,12 @@ STATE_FIND_LINE_AFTER_ROUNDABOUT = 40
 STATE_FOLLOWING_AFTER_ROUNDABOUT = 50
 STATE_LOCATE_BALL = 60
 STATE_LOCATE_HOLE = 70
+STATE_GOING_UNTIL_INTERSECTION_AFTER_BALL = 75
 STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO = 80
 STATE_ROUNDABOUT_TWO = 90
 STATE_FIND_LINE_AFTER_ROUNDABOUT_TWO = 100
 STATE_GO_TO_END = 110
+STATE_FINALE_STRETCH = 120
 
 
 def stop_requested():
@@ -209,9 +211,10 @@ def locate_ball(contours, img_center_x):
 
 def loop():
     print("% mission-run: start")
-    state = STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO
+    state = STATE_GOING_UNTIL_INTERSECTION_AFTER_BALL
     lost_count = 0
     searching = False
+    is_after_intersection = 0
     post_roundabout_started = False 
     go_to_end_initialized = False
     go_to_end_timer = None
@@ -322,29 +325,11 @@ def loop():
                 print("% mission-run: state 40 -> 50 (follow right line)")
                 
         elif state == STATE_FOLLOWING_AFTER_ROUNDABOUT:
-            if edge.lineValidCnt > LINE_VALID_MIN:
-                lost_count = 0
-            else:
-                lost_count += 1
-                if lost_count >= LOST_DEBOUNCE_COUNT:
-                    print("% mission-run: line lost after roundabout -> stopping")
-                    edge.lineControl(0, True)
-                    service.send("robobot/cmd/ti", "rc 0.0 0.0")
-                    service.stop = True
-                    break
-                
             if edge.splitDetected:
                 print("% mission-run: second branch/split detected -> locate ball")
                 edge.lineControl(0, True)
                 service.send("robobot/cmd/ti", "rc 0.0 0.0")
                 state = STATE_LOCATE_BALL
-            
-            if edge.intersectionDetected:
-                print("% mission-run: intersection detected -> locate ball")
-                edge.lineControl(0, True)
-                service.send("robobot/cmd/ti", "rc 0.0 0.0")
-                turn_with_feedback(90, turn_rate_deg_s=0, forward_m_s=0.0, stop_after=True)
-                state = STATE_GO_TO_END
                     
         elif state == STATE_LOCATE_BALL:
             try:
@@ -367,12 +352,32 @@ def loop():
             mask = cv.inRange(hsv, LOWER_ORANGE, UPPER_ORANGE)
             contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
             locate_ball(contours, img_center_x)
-            state = STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO
-            
+            state = STATE_GOING_UNTIL_INTERSECTION_AFTER_BALL
+
             #  here is missing the code from testing_ball_hole, when that is finished put here until it gets line and starts to follow on the left
             
-        elif state == STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO:
+        elif state == STATE_GOING_UNTIL_INTERSECTION_AFTER_BALL:
+            # Follow line until intersection is detected
             edge.lineControl(FOLLOW_SPEED, True)
+            
+            if edge.intersectionDetected:
+                is_after_intersection += 1
+                edge.lineControl(0, True)
+                
+            if is_after_intersection == 1 and edge.intersectionDetected:
+                print("% mission-run: first intersection detected after ball -> turn 90 def left and follow")
+                turn_with_feedback(90, turn_rate_deg_s=90, forward_m_s=0.0, stop_after=True)
+            if is_after_intersection == 2 and edge.intersectionDetected:
+                print("% mission-run: second intersection detected after ball -> go straight")
+                service.send("robobot/cmd/ti", f"rc {FOLLOW_SPEED:.2f} 0.00")
+                t.sleep(1.0)
+                state = STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO    
+                lost_count = 0
+                searching = False
+                edge.lineControl(FOLLOW_SPEED, True)
+        
+        elif state == STATE_FOLLOWING_UNTIL_ROUNDABOUT_TWO:
+            print(f"% mission-run: following until second roundabout, lineValidCnt={edge.lineValidCnt}")
             if edge.lineValidCnt > LINE_VALID_MIN:
                 lost_count = 0
             else:
@@ -402,12 +407,16 @@ def loop():
                     print("% mission-run: line found after second roundabout -> follow line")
                     service.send("robobot/cmd/ti", "rc 0.0 0.0")
                     searching = False
+                    edge.lineControl(FOLLOW_SPEED, False)
+                    t.sleep(0.5)  # small delay to allow lineValidCnt to update
+                    
             else:
-                edge.lineControl(FOLLOW_SPEED, False)
+                edge.lineControl(FOLLOW_SPEED)
+                print("% mission-run: trying to find intersection to go to end")
                 t.sleep(0.5)  # small delay to allow lineValidCnt to update
                 if edge.intersectionDetected:
                     print("% mission-run: intersection detected after second roundabout -> go to end")
-                    edge.lineControl(0, False)
+                    edge.lineControl(0, True)
                     service.send("robobot/cmd/ti", "rc 0.0 0.0")
                     state = STATE_GO_TO_END
 
@@ -443,17 +452,17 @@ def loop():
                     service.send("robobot/cmd/ti", f"rc {GO_STRAIGHT_SPEED:.2f} 0.00")
                 else:
                     # Line found! Switch to following on left
-                    print("% mission-run: line found at end -> following on left")
+                    print("% mission-run: line found at end -> following on left, go to finale stretch")
                     service.send("robobot/cmd/ti", "rc 0.0 0.0")
                     edge.lineControl(FOLLOW_SPEED, True)  # Follow on left
-                    t.sleep(0.5)  # small delay to allow lineValidCnt to update
-                    lost_count = 0
+                    state = STATE_FINALE_STRETCH
                 
-                # When intersection detected, switch to follow right
-                if edge.intersectionDetected:
-                    print("% mission-run: intersection detected at end -> follow right line to goal")
-                    edge.lineControl(FOLLOW_SPEED, False)  # Follow on right
-            
+        elif state == STATE_FINALE_STRETCH:
+            # When split detected, switch to follow right
+            if edge.splitDetected:
+                print("% mission-run: split detected at end -> follow right line to goal")
+                edge.lineControl(FOLLOW_SPEED, False)  # Follow on right
+                
         t.sleep(0.05)
 
     set_line_leds(0, 0, 0)
