@@ -6,7 +6,7 @@ from sedge import edge
 from sgpio import gpio
 
 # Parameters
-FOLLOW_SPEED = 0.35
+FOLLOW_SPEED = 0.3
 LINE_VALID_MIN = 5
 
 

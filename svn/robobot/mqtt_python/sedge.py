@@ -45,8 +45,8 @@ class SEdge:
     edge_nInterval = 0
     edgeIntervalSetup = 0.1
     # line detection levels
-    lineValidThreshold = 750 # 1000 is calibrated white orginially 750
-    crossingThreshold = 650 # average above this is assumed to be crossing line
+    lineValidThreshold = 650 # 1000 is calibrated white orginially 750
+    crossingThreshold = 550 # average above this is assumed to be crossing line
     # level for relevant white values
     low = lineValidThreshold - 100;
     # line detection values
@@ -74,9 +74,9 @@ class SEdge:
     # follow line controller
     lineCtrl = False # private
     # try with a P-Lead controller
-    lineKp = 0.7 # 5  (rad/s per sensor value) # changed from 1
-    lineTauZ = 1.5 # changed from 0.8 (second)
-    lineTauP = 0.05 # changed from 0.25 (second)
+    lineKp = 1.8 # 5  (rad/s per sensor value) # changed from 1 old 0.7
+    lineTauZ = 0.25 # changed from 0.8 (second)  old 1.5
+    lineTauP = 0.15 # changed from 0.25 (second) old 0.05 increase the gain, overshoot after 0.3
     # Lead pre-calculated factors
     tauP2pT = 1.0
     tauP2mT = 0.0

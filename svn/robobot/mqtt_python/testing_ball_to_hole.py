@@ -57,6 +57,57 @@ def wait_with_stop(duration_s, step_s=0.02):
         t.sleep(min(step_s, end_time - t.monotonic()))
     return True
 
+def rc_for(forward_m_s, turn_rad_s, duration_s, stop_after=False):
+    if stop_requested():
+        return False
+
+    service.send("robobot/cmd/ti", f"rc {forward_m_s:.3f} {turn_rad_s:.3f}")
+    ok = wait_with_stop(duration_s)
+
+    if stop_after or not ok:
+        service.send("robobot/cmd/ti", "rc 0.0 0.0")
+
+    return ok
+
+
+def ball_visible(min_area=20):
+    ok, img, _ = cam.getImage()
+    if not ok:
+        return True  # fail-safe
+
+    hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+    mask = cv.inRange(hsv, LOWER_ORANGE, UPPER_ORANGE)
+    contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+
+    if not contours:
+        return False
+
+    largest = max(contours, key=cv.contourArea)
+    return cv.contourArea(largest) >= min_area
+
+
+def rc_watch(forward_m_s, turn_rad_s, duration_s, check_dt=0.05):
+    """
+    Run an rc command while repeatedly checking whether the ball is still visible.
+    Returns True if hole found (ball disappeared), False otherwise.
+    """
+    end_time = t.monotonic() + duration_s
+
+    while t.monotonic() < end_time:
+        if stop_requested():
+            return False
+
+        service.send("robobot/cmd/ti", f"rc {forward_m_s:.3f} {turn_rad_s:.3f}")
+
+        if not ball_visible(min_area=20):
+            service.send("robobot/cmd/ti", "rc 0.0 0.0")
+            print("% line-test: ball disappeared -> hole found!")
+            return True
+
+        t.sleep(check_dt)
+
+    service.send("robobot/cmd/ti", "rc 0.0 0.0")
+    return False
 
 def locate_ball(contours, img_center_x):
     if contours:
@@ -89,7 +140,7 @@ def locate_ball(contours, img_center_x):
             # PHASE 3: Target Reached (10cm total)
             else:
                 service.send("robobot/cmd/ti", "rc 0.00 0.00")
-                servo.servo_change_position(200)
+                servo.servo_change_position(250)
                 service.send("robobot/cmd/T0", "leds 16 0 30 0")
                 return True
         else:
@@ -202,7 +253,7 @@ def run_test():
     print("% line-test: step 3 - turning right until line found again")
     edge.lineControl(0, True)  # Disable line following    
     while not stop_requested() and edge.lineValidCnt <= LINE_VALID_MIN:
-        service.send("robobot/cmd/ti", "rc 0.2 -0.4")  # Continue turning right and moving forward
+        service.send("robobot/cmd/ti", "rc 0.2 -0.6")  # Continue turning right and moving forward
         t.sleep(0.05)
     
     print("% line-test: line found -> step 3 complete")
@@ -240,46 +291,41 @@ def run_test():
     
     print("% line-test: step 4 complete - bump found on right side")
     
-    # # STEP 5: Move forward while swaying to find hole until ball disappears
-    # print("% line-test: step 5 - moving forward and swaying to find hole")
-    
-    # forward_speed = 0.12
-    # shake_speed = 0.40  # Increased side-to-side amplitude
-    # direction = 1
-    # last_switch_time = t.monotonic()
-    # switch_interval = 0.6  # Switch direction much faster (every 0.6 seconds)
-    
-    # while not stop_requested():
-    #     ok, img, _ = cam.getImage()
-    #     if not ok:
-    #         t.sleep(0.05)
-    #         continue
 
-    #     # Detect orange ball
-    #     hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
-    #     mask = cv.inRange(hsv, LOWER_ORANGE, UPPER_ORANGE)
-    #     contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
-        
-    #     current_area = 0
-    #     if contours:
-    #         largest = max(contours, key=cv.contourArea)
-    #         current_area = cv.contourArea(largest)
-        
-    #     # Check if ball disappeared (fell into hole)
-    #     if current_area < 20:
-    #         print("% line-test: ball disappeared -> hole found!")
-    #         service.send("robobot/cmd/ti", "rc 0.0 0.0")
-    #         t.sleep(0.2)
-    #         break
-        
-    #     # Oscillate side-to-side direction
-    #     if t.monotonic() - last_switch_time > switch_interval:
-    #         direction *= -1
-    #         last_switch_time = t.monotonic()
-        
-    #     # Move forward with side-to-side swaying
-    #     service.send("robobot/cmd/ti", f"rc {forward_speed} {shake_speed * direction:.2f}")
-    #     t.sleep(0.05)
+    # STEP 5: Sweep a WiFi-logo pattern in front of the robot
+    turn_with_feedback(-20, turn_rate_deg_s=20, forward_m_s=0.0, stop_after=True)
+    service.send("robobot/cmd/ti", f"rc {SEARCH_SPEED:.2f} 0.0")
+    t.sleep(1)
+    service.send("robobot/cmd/ti", "rc 0.0 0.0")
+    
+    print("% line-test: step 5 - sweeping WiFi pattern to find hole")
+
+    hole_found = False
+    wifi_arcs = [
+        (0.45,  0.90),   # small left
+        (0.90, -0.90),   # small right (cross through center)
+        (0.55,  0.70),   # medium left
+        (1.10, -0.70),   # medium right
+        (0.70,  0.50),   # large left
+        (1.40, -0.50),   # large right
+    ]
+
+    if not hole_found:
+        for i, (arc_time, turn_rate) in enumerate(wifi_arcs):
+            if stop_requested():
+                break
+
+            print(f"% line-test: step 5 - wifi arc {i+1}/{len(wifi_arcs)} turn={turn_rate:.2f}")
+            if rc_watch(SLOW_APPROACH, turn_rate, arc_time):
+                hole_found = True
+                break
+
+    service.send("robobot/cmd/ti", "rc 0.0 0.0")
+
+    if hole_found:
+        print("% line-test: step 5 complete - hole found")
+    else:
+        print("% line-test: step 5 complete - pattern finished, hole not found")
     
     print("% line-test: test sequence completed")
 
